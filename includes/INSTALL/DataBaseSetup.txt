@@ -1,0 +1,309 @@
+CREATE TABLE `ads` (
+  `id` int(11) NOT NULL auto_increment,
+  `domain` varchar(200) NOT NULL,
+  `photo` varchar(200) NOT NULL,
+  `totalclicks` int(11) NOT NULL,
+  `currentclicks` int(11) NOT NULL,
+  `spot` int(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+
+CREATE TABLE `adspots` (
+  `id` int(11) NOT NULL auto_increment,
+  `spot` int(11) NOT NULL,
+  `toggle` int(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
+
+--
+-- Dumping data for table `adspots`
+--
+
+INSERT INTO `adspots` VALUES(1, 1, 1);
+INSERT INTO `adspots` VALUES(2, 2, 1);
+INSERT INTO `adspots` VALUES(3, 3, 1);
+INSERT INTO `adspots` VALUES(4, 4, 1);
+INSERT INTO `adspots` VALUES(5, 5, 1);
+INSERT INTO `adspots` VALUES(6, 6, 1);
+INSERT INTO `adspots` VALUES(7, 7, 1);
+INSERT INTO `adspots` VALUES(8, 8, 1);
+INSERT INTO `adspots` VALUES(9, 9, 1);
+INSERT INTO `adspots` VALUES(10, 10, 1);
+INSERT INTO `adspots` VALUES(11, 11, 1);
+INSERT INTO `adspots` VALUES(12, 12, 1);
+INSERT INTO `adspots` VALUES(13, 13, 1);
+INSERT INTO `adspots` VALUES(14, 14, 1);
+INSERT INTO `adspots` VALUES(15, 15, 1);
+
+
+CREATE TABLE `blog` (
+  `id` int(11) NOT NULL auto_increment,
+  `title` varchar(200) NOT NULL,
+  `text` text NOT NULL,
+  `date` varchar(200) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+
+CREATE TABLE `files` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(200) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+
+
+CREATE TABLE `guests` (
+  `id` int(11) NOT NULL auto_increment,
+  `ip` varchar(200) default NULL,
+  `productid` int(11) default NULL,
+  `quantity` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+
+
+
+CREATE TABLE `members` (
+  `id` int(11) NOT NULL auto_increment,
+  `admin` int(11) NOT NULL,
+  `displayname` varchar(200) NOT NULL,
+  `username` varchar(200) NOT NULL,
+  `first` varchar(100) NOT NULL default '',
+  `last` varchar(100) NOT NULL default '',
+  `phone` varchar(100) NOT NULL default '',
+  `email` varchar(100) NOT NULL default '',
+  `photo` varchar(200) NOT NULL,
+  `description` text NOT NULL,
+  `gender` varchar(200) NOT NULL,
+  `relationship` varchar(200) NOT NULL,
+  `college` varchar(200) NOT NULL,
+  `age` varchar(200) NOT NULL,
+  `status` text NOT NULL,
+  `shippingcountry` varchar(200) NOT NULL,
+  `shippingaddress` varchar(200) NOT NULL default '',
+  `shippingaddress2` varchar(200) NOT NULL default '',
+  `shippingcity` varchar(200) NOT NULL default '',
+  `shippingstate` varchar(200) NOT NULL default '',
+  `shippingzip` varchar(200) NOT NULL default '',
+  `country` varchar(200) NOT NULL,
+  `address` varchar(200) NOT NULL default '',
+  `address2` varchar(200) NOT NULL default '',
+  `city` varchar(200) NOT NULL default '',
+  `state` varchar(200) NOT NULL default '',
+  `zip` varchar(200) NOT NULL default '',
+  `password` varchar(100) NOT NULL default '',
+  `orderid` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=43 ;
+
+
+INSERT INTO `members` VALUES(30, 1, 'Administrator', 'admin', '', '', '', 'ccowan2@satx.rr.com', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '12345', 0);
+
+
+
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL auto_increment,
+  `memberid` int(11) NOT NULL,
+  `date` varchar(200) NOT NULL,
+  `shipped` int(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+
+
+
+CREATE TABLE `pages` (
+  `id` int(11) NOT NULL auto_increment,
+  `deletable` int(11) NOT NULL,
+  `type` varchar(200) NOT NULL,
+  `pageorder` int(11) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `title` text NOT NULL,
+  `description` text NOT NULL,
+  `keywords` text NOT NULL,
+  `nav1` int(11) NOT NULL,
+  `nav2` int(11) NOT NULL,
+  `nav3` int(11) NOT NULL,
+  `text1` text NOT NULL,
+  `text2` text NOT NULL,
+  `text3` text NOT NULL,
+  `text4` text NOT NULL,
+  `text5` text NOT NULL,
+  `text6` text NOT NULL,
+  `text7` text NOT NULL,
+  `text8` text NOT NULL,
+  `copyright` text NOT NULL,
+  `contactemail` varchar(200) NOT NULL,
+  `contactthankyou` text NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=39 ;
+
+
+CREATE TABLE `pagetypes` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(200) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `pagetypes`
+--
+
+INSERT INTO `pagetypes` VALUES(1, 'Standard Page');
+INSERT INTO `pagetypes` VALUES(2, 'Photo Gallery');
+INSERT INTO `pagetypes` VALUES(3, 'Contact Form');
+INSERT INTO `pagetypes` VALUES(4, 'Profile Page');
+INSERT INTO `pagetypes` VALUES(5, 'Service Page');
+INSERT INTO `pagetypes` VALUES(6, 'Dropdown Menu');
+
+
+
+CREATE TABLE `products` (
+  `id` int(11) NOT NULL auto_increment,
+  `category` varchar(200) NOT NULL,
+  `name` varchar(200) NOT NULL default '',
+  `description` text NOT NULL,
+  `price` varchar(10) NOT NULL default '0',
+  `featured` int(11) NOT NULL,
+  `pic1` varchar(200) NOT NULL default '',
+  `quantity` int(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=68 ;
+
+
+
+CREATE TABLE `store_categories` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(200) NOT NULL,
+  `pageorder` int(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=34 ;
+
+CREATE TABLE `logo` (
+  `filename` varchar(200) NOT NULL default ''
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+INSERT INTO `logo` VALUES('logo.jpg');
+
+
+CREATE TABLE `newsletter` (
+  `id` int(11) NOT NULL auto_increment,
+  `first` varchar(200) NOT NULL,
+  `last` varchar(200) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `status` int(11) NOT NULL,
+  `message` text NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=356 ;
+
+
+
+--
+-- Table structure for table `newsletter_actions`
+--
+
+CREATE TABLE `newsletter_actions` (
+  `id` int(11) NOT NULL auto_increment,
+  `messages` int(11) NOT NULL,
+  `template` text NOT NULL,
+  `list` text NOT NULL,
+  `frommail` text NOT NULL,
+  `subject` text NOT NULL,
+  `message` text NOT NULL,
+  `message2` text NOT NULL,
+  `textmail` int(11) NOT NULL,
+  `htmlmail` int(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
+
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `newsletter_lists`
+--
+
+CREATE TABLE `newsletter_lists` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` text NOT NULL,
+  `active` int(11) NOT NULL,
+  `deleteable` int(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+
+--
+-- Dumping data for table `newsletter_lists`
+--
+
+INSERT INTO `newsletter_lists` VALUES(2, 'All Members', 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `newsletter_list_2`
+--
+
+CREATE TABLE `newsletter_list_2` (
+  `id` int(11) NOT NULL auto_increment,
+  `memberid` int(11) default NULL,
+  `email` text,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `newsletter_list_2`
+--
+
+
+-- --------------------------------------------------------
+
+
+
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `newsletter_send`
+--
+
+CREATE TABLE `newsletter_send` (
+  `id` int(11) NOT NULL auto_increment,
+  `memberid` int(11) NOT NULL,
+  `email` text NOT NULL,
+  `failed` int(11) NOT NULL,
+  `action` int(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=354 ;
+
+--
+-- Dumping data for table `newsletter_send`
+--
+
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `newsletter_templates`
+--
+
+CREATE TABLE `newsletter_templates` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` text NOT NULL,
+  `frommail` text NOT NULL,
+  `subject` text NOT NULL,
+  `message` text NOT NULL,
+  `message2` text NOT NULL,
+  `active` int(11) NOT NULL,
+  `textmail` int(11) NOT NULL,
+  `htmlmail` int(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `newsletter_templates`
+--
+
+

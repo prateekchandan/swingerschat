@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<images>
+<image src="ADS/1287429279.png" caption="" href="" target="_self" transition="1" />
+<image src="ADS/1287429487.png" caption="" href="" target="_self" transition="1" />
+</images>
+<settings>
+<slideShow width = "751" height = "300"  />
+<autoPlay playOption = "0" delay = "4" />
+<caption capOption = "1" />
+<buttons styleOption = "1" />
+</settings>

@@ -1,0 +1,1191 @@
+-- phpMyAdmin SQL Dump
+-- version 2.11.9.4
+-- http://www.phpmyadmin.net
+--
+-- Host: 10.6.166.133
+-- Generation Time: Oct 05, 2010 at 08:58 AM
+-- Server version: 5.0.91
+-- PHP Version: 5.2.8
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `kazamerica`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ads`
+--
+
+CREATE TABLE `ads` (
+  `id` int(11) NOT NULL auto_increment,
+  `domain` varchar(200) NOT NULL,
+  `photo` varchar(200) NOT NULL,
+  `totalclicks` int(11) NOT NULL,
+  `currentclicks` int(11) NOT NULL,
+  `spot` int(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+
+--
+-- Dumping data for table `ads`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `adspots`
+--
+
+CREATE TABLE `adspots` (
+  `id` int(11) NOT NULL auto_increment,
+  `spot` int(11) NOT NULL,
+  `toggle` int(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
+
+--
+-- Dumping data for table `adspots`
+--
+
+INSERT INTO `adspots` VALUES(1, 1, 1);
+INSERT INTO `adspots` VALUES(2, 2, 1);
+INSERT INTO `adspots` VALUES(3, 3, 1);
+INSERT INTO `adspots` VALUES(4, 4, 1);
+INSERT INTO `adspots` VALUES(5, 5, 1);
+INSERT INTO `adspots` VALUES(6, 6, 1);
+INSERT INTO `adspots` VALUES(7, 7, 1);
+INSERT INTO `adspots` VALUES(8, 8, 1);
+INSERT INTO `adspots` VALUES(9, 9, 1);
+INSERT INTO `adspots` VALUES(10, 10, 1);
+INSERT INTO `adspots` VALUES(11, 11, 1);
+INSERT INTO `adspots` VALUES(12, 12, 1);
+INSERT INTO `adspots` VALUES(13, 13, 1);
+INSERT INTO `adspots` VALUES(14, 14, 1);
+INSERT INTO `adspots` VALUES(15, 15, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `blog`
+--
+
+CREATE TABLE `blog` (
+  `id` int(11) NOT NULL auto_increment,
+  `title` varchar(200) NOT NULL,
+  `text` text NOT NULL,
+  `date` varchar(200) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+
+--
+-- Dumping data for table `blog`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Contact_41`
+--
+
+CREATE TABLE `Contact_41` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(200) default NULL,
+  `type` varchar(200) default NULL,
+  `fieldorder` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `Contact_41`
+--
+
+INSERT INTO `Contact_41` VALUES(1, 'Name', 'text', 1);
+INSERT INTO `Contact_41` VALUES(2, 'E-mail', 'text', 2);
+INSERT INTO `Contact_41` VALUES(3, 'Phone', 'text', 3);
+INSERT INTO `Contact_41` VALUES(4, 'Comments', 'textarea', 4);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `files`
+--
+
+CREATE TABLE `files` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(200) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `files`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `guests`
+--
+
+CREATE TABLE `guests` (
+  `id` int(11) NOT NULL auto_increment,
+  `ip` varchar(200) default NULL,
+  `productid` int(11) default NULL,
+  `quantity` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22 ;
+
+--
+-- Dumping data for table `guests`
+--
+
+INSERT INTO `guests` VALUES(7, '24.174.186.154', 80, 1);
+INSERT INTO `guests` VALUES(8, '24.174.186.154', 71, 1);
+INSERT INTO `guests` VALUES(9, '24.174.186.154', 75, 1);
+INSERT INTO `guests` VALUES(12, '216.104.15.142', 70, 1);
+INSERT INTO `guests` VALUES(20, '67.133.192.130', 74, 1);
+INSERT INTO `guests` VALUES(18, '216.104.15.130', 70, 1);
+INSERT INTO `guests` VALUES(21, '69.231.58.137', 77, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `HitCounterRef_39`
+--
+
+CREATE TABLE `HitCounterRef_39` (
+  `id` int(11) NOT NULL auto_increment,
+  `referrer` varchar(200) default NULL,
+  `totalhits` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=45 ;
+
+--
+-- Dumping data for table `HitCounterRef_39`
+--
+
+INSERT INTO `HitCounterRef_39` VALUES(1, '', 38);
+INSERT INTO `HitCounterRef_39` VALUES(2, 'http://www.mrwebpage.net/CUSTOM/DavidK/', 38);
+INSERT INTO `HitCounterRef_39` VALUES(3, 'http://www.mrwebpage.net/CUSTOM/DavidK/index.php', 13);
+INSERT INTO `HitCounterRef_39` VALUES(4, 'http://www.mrwebpage.net/CUSTOM/DavidK/index.php?id=39', 67);
+INSERT INTO `HitCounterRef_39` VALUES(5, 'http://www.mrwebpage.net/CUSTOM/DavidK/store.php?category=Security%20Cameras&categoryid=51', 44);
+INSERT INTO `HitCounterRef_39` VALUES(6, 'http://www.mrwebpage.net/CUSTOM/DavidK/contact.php?id=41', 10);
+INSERT INTO `HitCounterRef_39` VALUES(7, 'http://www.mrwebpage.net/CUSTOM/DavidK/storeviewcart.php', 53);
+INSERT INTO `HitCounterRef_39` VALUES(8, 'http://www.mrwebpage.net/CUSTOM/DavidK/store.php?id=40', 17);
+INSERT INTO `HitCounterRef_39` VALUES(9, 'http://www.mrwebpage.net/CUSTOM/DavidK/store.php?category=DVR&categoryid=52', 17);
+INSERT INTO `HitCounterRef_39` VALUES(10, 'http://www.mrwebpage.net/CUSTOM/DavidK/index2.php?id=43', 2);
+INSERT INTO `HitCounterRef_39` VALUES(11, 'http://www.mrwebpage.net/CUSTOM/DavidK/index2.php?id=44', 6);
+INSERT INTO `HitCounterRef_39` VALUES(12, 'http://www.mrwebpage.net/CUSTOM/DavidK/index2.php?id=45', 1);
+INSERT INTO `HitCounterRef_39` VALUES(13, 'http://www.mrwebpage.net/CUSTOM/DavidK/storeviewcart.php?message=', 19);
+INSERT INTO `HitCounterRef_39` VALUES(14, 'http://www.mrwebpage.net/CUSTOM/DavidK/store.php', 14);
+INSERT INTO `HitCounterRef_39` VALUES(15, 'http://www.mrwebpage.net/CUSTOM/DavidK/storeviewcart.php?message=1', 5);
+INSERT INTO `HitCounterRef_39` VALUES(16, 'http://www.mrwebpage.net/CUSTOM/DavidK/storecheckout.php?submit=Checkout', 42);
+INSERT INTO `HitCounterRef_39` VALUES(17, 'http://www.mrwebpage.net/CUSTOM/DavidK/storecheckout3.php', 7);
+INSERT INTO `HitCounterRef_39` VALUES(18, 'http://www.mrwebpage.net/CUSTOM/DavidK/store.php?category=Security Cameras&categoryid=51', 4);
+INSERT INTO `HitCounterRef_39` VALUES(19, 'http://us.mg1.mail.yahoo.com/dc/launch?.gx=1&.rand=43ce1e4d7rpp4', 1);
+INSERT INTO `HitCounterRef_39` VALUES(20, 'http://us.mg1.mail.yahoo.com/dc/launch?.gx=1&.rand=9lntrjml88bpg', 1);
+INSERT INTO `HitCounterRef_39` VALUES(21, 'http://us.mg1.mail.yahoo.com/dc/launch?.gx=1&.rand=c82hoveemmsb1', 1);
+INSERT INTO `HitCounterRef_39` VALUES(22, 'http://us.mg1.mail.yahoo.com/dc/launch?.gx=1&.rand=9noabqm4cva8r', 1);
+INSERT INTO `HitCounterRef_39` VALUES(23, 'http://www.mrwebpage.net/CUSTOM/DavidK/storecheckout.php?error=1', 2);
+INSERT INTO `HitCounterRef_39` VALUES(24, 'http://www.mrwebpage.net/CUSTOM/DavidK/storeproduct.php?productid=74&category=52&categoryid=52', 1);
+INSERT INTO `HitCounterRef_39` VALUES(25, 'http://www.mrwebpage.net/CUSTOM/DavidK/storeproduct.php?productid=70&category=51&categoryid=51', 1);
+INSERT INTO `HitCounterRef_39` VALUES(26, 'http://www.mrwebpage.net/CUSTOM/DavidK/store.php?category=51&categoryid=51', 2);
+INSERT INTO `HitCounterRef_39` VALUES(27, 'http://www.mrwebpage.net/CUSTOM/DavidK/storeproduct.php?productid=70&category=Kazcam101&categoryid=51', 1);
+INSERT INTO `HitCounterRef_39` VALUES(28, 'http://www.mrwebpage.net/CUSTOM/DavidK/storeproduct.php?productid=71&category=Security%20Cameras&categoryid=51', 5);
+INSERT INTO `HitCounterRef_39` VALUES(29, 'http://www.mrwebpage.net/CUSTOM/DavidK/storeproduct.php?productid=72&category=Security%20Cameras&categoryid=51', 1);
+INSERT INTO `HitCounterRef_39` VALUES(30, 'http://www.mrwebpage.net/CUSTOM/DavidK/storeproduct.php?productid=76&category=DVR&categoryid=52', 2);
+INSERT INTO `HitCounterRef_39` VALUES(31, 'http://www.mrwebpage.net/CUSTOM/DavidK/storeproduct.php?productid=70&category=Security%20Cameras&categoryid=51', 5);
+INSERT INTO `HitCounterRef_39` VALUES(32, 'http://www.mrwebpage.net/CUSTOM/DavidK/storecheckout2.php', 23);
+INSERT INTO `HitCounterRef_39` VALUES(33, 'http://www.mrwebpage.net/CUSTOM/DavidK/storecheckout22.php', 23);
+INSERT INTO `HitCounterRef_39` VALUES(34, 'http://www.mrwebpage.net/CUSTOM/DavidK/storecheckout.php', 3);
+INSERT INTO `HitCounterRef_39` VALUES(35, 'http://www.mrwebpage.net/CUSTOM/DavidK/storecheckout2.php?error=1', 3);
+INSERT INTO `HitCounterRef_39` VALUES(36, 'http://www.mrwebpage.net/CUSTOM/DavidK/storesaledeclined.php?invoice_num=45&trans_result=DECLINED&transID=2308140&amount=0.01&cust_id=&ID=45&max_score=0.13&authCode=&avs_result=U&cvv2_result=N&md5_has', 1);
+INSERT INTO `HitCounterRef_39` VALUES(37, 'http://www.mrwebpage.net/CUSTOM/DavidK/storesaledeclined.php?invoice_num=45&trans_result=DECLINED&transID=2308149&amount=0.01&cust_id=&ID=45&max_score=0.13&authCode=&avs_result=A&cvv2_result=N&md5_has', 1);
+INSERT INTO `HitCounterRef_39` VALUES(38, 'http://us.mg1.mail.yahoo.com/dc/launch?.gx=1&.rand=0btnq585bdos9', 1);
+INSERT INTO `HitCounterRef_39` VALUES(39, 'http://www.mrwebpage.net/CUSTOM/DavidK/storecheckout.php?error=3', 2);
+INSERT INTO `HitCounterRef_39` VALUES(40, 'http://www.mrwebpage.net/CUSTOM/DavidK/storeproduct.php?productid=77&category=Security%20Cameras&categoryid=51', 1);
+INSERT INTO `HitCounterRef_39` VALUES(41, 'http://www.mrwebpage.net/CUSTOM/DavidK/storeproduct.php?productid=74&category=DVR&categoryid=52', 2);
+INSERT INTO `HitCounterRef_39` VALUES(42, 'http://us.mg1.mail.yahoo.com/dc/launch?.gx=1&.rand=aq8ag01b8fgbg', 2);
+INSERT INTO `HitCounterRef_39` VALUES(43, 'http://www.mrwebpage.net/CUSTOM/DavidK/storeproduct.php?productid=77&category=51&categoryid=', 1);
+INSERT INTO `HitCounterRef_39` VALUES(44, 'http://us.mg1.mail.yahoo.com/dc/launch?.gx=1&.rand=0n1p2qld94pmr', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `HitCounterRef_40`
+--
+
+CREATE TABLE `HitCounterRef_40` (
+  `id` int(11) NOT NULL auto_increment,
+  `referrer` varchar(200) default NULL,
+  `totalhits` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+
+--
+-- Dumping data for table `HitCounterRef_40`
+--
+
+INSERT INTO `HitCounterRef_40` VALUES(1, 'http://www.mrwebpage.net/CUSTOM/DavidK/index.php?id=39', 6);
+INSERT INTO `HitCounterRef_40` VALUES(2, 'http://www.mrwebpage.net/CUSTOM/DavidK/store.php?category=Security%20Cameras&categoryid=51', 1);
+INSERT INTO `HitCounterRef_40` VALUES(3, 'http://www.mrwebpage.net/CUSTOM/DavidK/contact.php?id=41', 2);
+INSERT INTO `HitCounterRef_40` VALUES(4, 'http://www.mrwebpage.net/CUSTOM/DavidK/store.php?category=DVR&categoryid=52', 2);
+INSERT INTO `HitCounterRef_40` VALUES(5, 'http://www.mrwebpage.net/CUSTOM/DavidK/index2.php?id=44', 1);
+INSERT INTO `HitCounterRef_40` VALUES(6, '', 1);
+INSERT INTO `HitCounterRef_40` VALUES(7, 'http://www.mrwebpage.net/CUSTOM/DavidK/index.php', 1);
+INSERT INTO `HitCounterRef_40` VALUES(8, 'http://www.mrwebpage.net/CUSTOM/DavidK/index2.php?id=45', 2);
+INSERT INTO `HitCounterRef_40` VALUES(9, 'http://www.mrwebpage.net/CUSTOM/DavidK/', 1);
+INSERT INTO `HitCounterRef_40` VALUES(10, 'http://www.mrwebpage.net/CUSTOM/DavidK/storeviewcart.php', 1);
+INSERT INTO `HitCounterRef_40` VALUES(11, 'http://www.mrwebpage.net/CUSTOM/DavidK/index2.php?id=42', 1);
+INSERT INTO `HitCounterRef_40` VALUES(12, 'http://www.mrwebpage.net/CUSTOM/DavidK/storecheckout3.php', 1);
+INSERT INTO `HitCounterRef_40` VALUES(13, 'http://www.mrwebpage.net/CUSTOM/DavidK/index2.php?id=43', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `HitCounterRef_41`
+--
+
+CREATE TABLE `HitCounterRef_41` (
+  `id` int(11) NOT NULL auto_increment,
+  `referrer` varchar(200) default NULL,
+  `totalhits` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `HitCounterRef_41`
+--
+
+INSERT INTO `HitCounterRef_41` VALUES(1, 'http://www.mrwebpage.net/CUSTOM/DavidK/index.php?id=39', 2);
+INSERT INTO `HitCounterRef_41` VALUES(2, 'http://www.mrwebpage.net/CUSTOM/DavidK/store.php?category=Security%20Cameras&categoryid=51', 6);
+INSERT INTO `HitCounterRef_41` VALUES(3, 'http://www.mrwebpage.net/CUSTOM/DavidK/store.php?id=40', 1);
+INSERT INTO `HitCounterRef_41` VALUES(4, 'http://www.mrwebpage.net/CUSTOM/DavidK/index.php', 6);
+INSERT INTO `HitCounterRef_41` VALUES(5, 'http://www.mrwebpage.net/CUSTOM/DavidK/index2.php?id=44', 5);
+INSERT INTO `HitCounterRef_41` VALUES(6, 'http://www.mrwebpage.net/CUSTOM/DavidK/index2.php?id=42', 1);
+INSERT INTO `HitCounterRef_41` VALUES(7, '', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `HitCounterRef_42`
+--
+
+CREATE TABLE `HitCounterRef_42` (
+  `id` int(11) NOT NULL auto_increment,
+  `referrer` varchar(200) default NULL,
+  `totalhits` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `HitCounterRef_42`
+--
+
+INSERT INTO `HitCounterRef_42` VALUES(1, 'http://www.mrwebpage.net/CUSTOM/DavidK/store.php?category=DVR&categoryid=52', 6);
+INSERT INTO `HitCounterRef_42` VALUES(2, 'http://www.mrwebpage.net/CUSTOM/DavidK/index2.php?id=43', 2);
+INSERT INTO `HitCounterRef_42` VALUES(3, 'http://www.mrwebpage.net/CUSTOM/DavidK/contact.php?id=41', 3);
+INSERT INTO `HitCounterRef_42` VALUES(4, 'http://www.mrwebpage.net/CUSTOM/DavidK/store.php?id=40', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `HitCounterRef_43`
+--
+
+CREATE TABLE `HitCounterRef_43` (
+  `id` int(11) NOT NULL auto_increment,
+  `referrer` varchar(200) default NULL,
+  `totalhits` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `HitCounterRef_43`
+--
+
+INSERT INTO `HitCounterRef_43` VALUES(1, 'http://www.mrwebpage.net/CUSTOM/DavidK/index2.php?id=42', 3);
+INSERT INTO `HitCounterRef_43` VALUES(2, 'http://www.mrwebpage.net/CUSTOM/DavidK/store.php?category=DVR&categoryid=52', 1);
+INSERT INTO `HitCounterRef_43` VALUES(3, 'http://www.mrwebpage.net/CUSTOM/DavidK/index2.php?id=44', 1);
+INSERT INTO `HitCounterRef_43` VALUES(4, 'http://www.mrwebpage.net/CUSTOM/DavidK/index2.php?id=45', 4);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `HitCounterRef_44`
+--
+
+CREATE TABLE `HitCounterRef_44` (
+  `id` int(11) NOT NULL auto_increment,
+  `referrer` varchar(200) default NULL,
+  `totalhits` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `HitCounterRef_44`
+--
+
+INSERT INTO `HitCounterRef_44` VALUES(1, 'http://www.mrwebpage.net/CUSTOM/DavidK/store.php?id=40', 5);
+INSERT INTO `HitCounterRef_44` VALUES(2, 'http://www.mrwebpage.net/CUSTOM/DavidK/contact.php?id=41', 3);
+INSERT INTO `HitCounterRef_44` VALUES(3, 'http://www.mrwebpage.net/CUSTOM/DavidK/index2.php?id=43', 1);
+INSERT INTO `HitCounterRef_44` VALUES(4, 'http://www.mrwebpage.net/CUSTOM/DavidK/storeviewcart.php', 2);
+INSERT INTO `HitCounterRef_44` VALUES(5, '', 1);
+INSERT INTO `HitCounterRef_44` VALUES(6, 'http://www.mrwebpage.net/CUSTOM/DavidK/index.php?id=39', 1);
+INSERT INTO `HitCounterRef_44` VALUES(7, 'http://www.mrwebpage.net/CUSTOM/DavidK/index.php', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `HitCounterRef_45`
+--
+
+CREATE TABLE `HitCounterRef_45` (
+  `id` int(11) NOT NULL auto_increment,
+  `referrer` varchar(200) default NULL,
+  `totalhits` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `HitCounterRef_45`
+--
+
+INSERT INTO `HitCounterRef_45` VALUES(1, 'http://www.mrwebpage.net/CUSTOM/DavidK/index2.php?id=43', 3);
+INSERT INTO `HitCounterRef_45` VALUES(2, 'http://www.mrwebpage.net/CUSTOM/DavidK/storeviewcart.php?message=', 1);
+INSERT INTO `HitCounterRef_45` VALUES(3, 'http://www.mrwebpage.net/CUSTOM/DavidK/index.php?id=39', 1);
+INSERT INTO `HitCounterRef_45` VALUES(4, '', 1);
+INSERT INTO `HitCounterRef_45` VALUES(5, 'http://www.mrwebpage.net/CUSTOM/DavidK/index2.php?id=42', 2);
+INSERT INTO `HitCounterRef_45` VALUES(6, 'http://www.mrwebpage.net/CUSTOM/DavidK/contact.php?id=41', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `HitCounter_39`
+--
+
+CREATE TABLE `HitCounter_39` (
+  `id` int(11) NOT NULL auto_increment,
+  `today` varchar(200) default NULL,
+  `hits_today` int(11) default NULL,
+  `totalhits` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `HitCounter_39`
+--
+
+INSERT INTO `HitCounter_39` VALUES(1, 'Wednesday', 2, 486);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `HitCounter_40`
+--
+
+CREATE TABLE `HitCounter_40` (
+  `id` int(11) NOT NULL auto_increment,
+  `today` varchar(200) default NULL,
+  `hits_today` int(11) default NULL,
+  `totalhits` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `HitCounter_40`
+--
+
+INSERT INTO `HitCounter_40` VALUES(1, 'Thursday', 1, 21);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `HitCounter_41`
+--
+
+CREATE TABLE `HitCounter_41` (
+  `id` int(11) NOT NULL auto_increment,
+  `today` varchar(200) default NULL,
+  `hits_today` int(11) default NULL,
+  `totalhits` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `HitCounter_41`
+--
+
+INSERT INTO `HitCounter_41` VALUES(1, 'Saturday', 1, 22);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `HitCounter_42`
+--
+
+CREATE TABLE `HitCounter_42` (
+  `id` int(11) NOT NULL auto_increment,
+  `today` varchar(200) default NULL,
+  `hits_today` int(11) default NULL,
+  `totalhits` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `HitCounter_42`
+--
+
+INSERT INTO `HitCounter_42` VALUES(1, 'Thursday', 1, 12);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `HitCounter_43`
+--
+
+CREATE TABLE `HitCounter_43` (
+  `id` int(11) NOT NULL auto_increment,
+  `today` varchar(200) default NULL,
+  `hits_today` int(11) default NULL,
+  `totalhits` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `HitCounter_43`
+--
+
+INSERT INTO `HitCounter_43` VALUES(1, 'Friday', 1, 9);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `HitCounter_44`
+--
+
+CREATE TABLE `HitCounter_44` (
+  `id` int(11) NOT NULL auto_increment,
+  `today` varchar(200) default NULL,
+  `hits_today` int(11) default NULL,
+  `totalhits` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `HitCounter_44`
+--
+
+INSERT INTO `HitCounter_44` VALUES(1, 'Saturday', 1, 14);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `HitCounter_45`
+--
+
+CREATE TABLE `HitCounter_45` (
+  `id` int(11) NOT NULL auto_increment,
+  `today` varchar(200) default NULL,
+  `hits_today` int(11) default NULL,
+  `totalhits` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `HitCounter_45`
+--
+
+INSERT INTO `HitCounter_45` VALUES(1, 'Friday', 1, 9);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `logo`
+--
+
+CREATE TABLE `logo` (
+  `filename` varchar(200) NOT NULL default ''
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `logo`
+--
+
+INSERT INTO `logo` VALUES('logo.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `members`
+--
+
+CREATE TABLE `members` (
+  `id` int(11) NOT NULL auto_increment,
+  `admin` int(11) NOT NULL,
+  `displayname` varchar(200) NOT NULL,
+  `username` varchar(200) NOT NULL,
+  `first` varchar(100) NOT NULL default '',
+  `last` varchar(100) NOT NULL default '',
+  `phone` varchar(100) NOT NULL default '',
+  `email` varchar(100) NOT NULL default '',
+  `photo` varchar(200) NOT NULL,
+  `description` text NOT NULL,
+  `gender` varchar(200) NOT NULL,
+  `relationship` varchar(200) NOT NULL,
+  `college` varchar(200) NOT NULL,
+  `age` varchar(200) NOT NULL,
+  `status` text NOT NULL,
+  `shippingcountry` text NOT NULL,
+  `shippingaddress` text NOT NULL,
+  `shippingaddress2` text NOT NULL,
+  `shippingcity` text NOT NULL,
+  `shippingstate` text NOT NULL,
+  `shippingzip` text NOT NULL,
+  `country` varchar(200) NOT NULL,
+  `address` varchar(200) NOT NULL default '',
+  `address2` varchar(200) NOT NULL default '',
+  `city` varchar(200) NOT NULL default '',
+  `state` varchar(200) NOT NULL default '',
+  `zip` varchar(200) NOT NULL default '',
+  `password` varchar(100) NOT NULL default '',
+  `orderid` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=49 ;
+
+--
+-- Dumping data for table `members`
+--
+
+INSERT INTO `members` VALUES(30, 1, 'Administrator', 'admin', '', '', '', 'ccowan2@satx.rr.com', '', '', '', '', '', '', '', '<div style="text-align: center;">If you need help, give us a call.<br><font size="6"><span style="font-weight: bold; color: rgb(3, 233, 254);">888.658.1545</span></font><br></div>', '', '', '', '<span style="font-weight: bold;">DISCLAIMER:</span><br><font size="2"><br>\r\nKazamerica.com\r\nalways strives to provide the correct information regarding products,\r\npricing and other details. However mistakes can be made and therefore\r\nKazamerica.com must and does reserve the right to change any content,\r\nprices or other material on our website without notice and cannot be\r\nheld legally responsible for such. In order to ensure correct\r\ninformation is provided to you, please contact with our sales team\r\nanytime at sales@kazamerica.com\r\n</font>', '<br>', '', '', '', '', '', '', '12345', 0);
+INSERT INTO `members` VALUES(43, 0, '', 'cdgtest', 'cdgtest', 'cdgtest', '1214549898', 'cdgtestc@yahoo.com', 'noimage.jpg', '', '', '', '', '', '', 'United States', '12 cdg', '', 'asdf', 'va', '23464', 'United States', '12 cdg', '', 'asdf', 'va', '23464', '1234567', 0);
+INSERT INTO `members` VALUES(44, 0, '', 's', 'a', 'z', '6041221234', 'r@hotmail.com', 'noimage.jpg', '', '', '', '', '', '', 'United States', '22322 xyz st', '', 'somewhere', 'ca', '92632', 'United States', '22322 xyz st', '', 'somewhere', 'ca', '92632', 'aabb', 0);
+INSERT INTO `members` VALUES(45, 0, '', 'clarencecowan', 'Clarence', 'Cowan', '210-896-9283', 'ccowan@mrwebpage.net', 'noimage.jpg', '', '', '', '', '', '', 'United States', '300 Sunflower Dr', '', 'Marion', 'TX', '78124', 'United States', '300 Sunflower Dr', '', 'Marion', 'TX', '78124', '12345', 0);
+INSERT INTO `members` VALUES(46, 0, '', 'xyz', 'abc', 'def', '2134445566', 'a@hotmail.com', 'noimage.jpg', '', '', '', '', '', '', 'United States', '22 any street', '', 'yorbalinda', 'ca', '92886', 'United States', '22 any street', '', 'yorbalinda', 'ca', '92886', 'xyz9', 0);
+INSERT INTO `members` VALUES(47, 0, '', 'cdg', 'cdgtest', 'cdgtest', '123456879', 'cdgtest@AOL.COM', 'noimage.jpg', '', '', '', '', '', '', 'United States', '12 cdg', '', 'asdf', 'va', '23464', 'United States', '12 cdg', '', 'asdf', 'va', '23464', '12345', 0);
+INSERT INTO `members` VALUES(48, 0, '', 'cdg2', 'cdgtest', 'cdgtest', '1214549898', 'deeRpark@aol.com', 'noimage.jpg', '', '', '', '', '', '', 'United States', '9875 Rope St.', '', 'Va Beach', 'va', '23464', 'United States', '9875 Rope St.', '', 'Va Beach', 'va', '23464', '12345', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `member_43`
+--
+
+CREATE TABLE `member_43` (
+  `id` int(11) NOT NULL auto_increment,
+  `productid` int(11) default NULL,
+  `quantity` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `member_43`
+--
+
+INSERT INTO `member_43` VALUES(1, 70, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `member_44`
+--
+
+CREATE TABLE `member_44` (
+  `id` int(11) NOT NULL auto_increment,
+  `productid` int(11) default NULL,
+  `quantity` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `member_44`
+--
+
+INSERT INTO `member_44` VALUES(1, 70, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `member_45`
+--
+
+CREATE TABLE `member_45` (
+  `id` int(11) NOT NULL auto_increment,
+  `productid` int(11) default NULL,
+  `quantity` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `member_45`
+--
+
+INSERT INTO `member_45` VALUES(1, 70, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `member_46`
+--
+
+CREATE TABLE `member_46` (
+  `id` int(11) NOT NULL auto_increment,
+  `productid` int(11) default NULL,
+  `quantity` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `member_46`
+--
+
+INSERT INTO `member_46` VALUES(1, 70, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `member_47`
+--
+
+CREATE TABLE `member_47` (
+  `id` int(11) NOT NULL auto_increment,
+  `productid` int(11) default NULL,
+  `quantity` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `member_47`
+--
+
+INSERT INTO `member_47` VALUES(1, 70, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `member_48`
+--
+
+CREATE TABLE `member_48` (
+  `id` int(11) NOT NULL auto_increment,
+  `productid` int(11) default NULL,
+  `quantity` int(11) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `member_48`
+--
+
+INSERT INTO `member_48` VALUES(1, 77, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `newsletter`
+--
+
+CREATE TABLE `newsletter` (
+  `id` int(11) NOT NULL auto_increment,
+  `first` varchar(200) NOT NULL,
+  `last` varchar(200) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `status` int(11) NOT NULL,
+  `message` text NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=356 ;
+
+--
+-- Dumping data for table `newsletter`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `newsletter_actions`
+--
+
+CREATE TABLE `newsletter_actions` (
+  `id` int(11) NOT NULL auto_increment,
+  `messages` int(11) NOT NULL,
+  `template` text NOT NULL,
+  `list` text NOT NULL,
+  `frommail` text NOT NULL,
+  `subject` text NOT NULL,
+  `message` text NOT NULL,
+  `message2` text NOT NULL,
+  `textmail` int(11) NOT NULL,
+  `htmlmail` int(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
+
+--
+-- Dumping data for table `newsletter_actions`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `newsletter_lists`
+--
+
+CREATE TABLE `newsletter_lists` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` text NOT NULL,
+  `active` int(11) NOT NULL,
+  `deleteable` int(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+
+--
+-- Dumping data for table `newsletter_lists`
+--
+
+INSERT INTO `newsletter_lists` VALUES(2, 'All Members', 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `newsletter_list_2`
+--
+
+CREATE TABLE `newsletter_list_2` (
+  `id` int(11) NOT NULL auto_increment,
+  `memberid` int(11) default NULL,
+  `email` text,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `newsletter_list_2`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `newsletter_send`
+--
+
+CREATE TABLE `newsletter_send` (
+  `id` int(11) NOT NULL auto_increment,
+  `memberid` int(11) NOT NULL,
+  `email` text NOT NULL,
+  `failed` int(11) NOT NULL,
+  `action` int(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=354 ;
+
+--
+-- Dumping data for table `newsletter_send`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `newsletter_templates`
+--
+
+CREATE TABLE `newsletter_templates` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` text NOT NULL,
+  `frommail` text NOT NULL,
+  `subject` text NOT NULL,
+  `message` text NOT NULL,
+  `message2` text NOT NULL,
+  `active` int(11) NOT NULL,
+  `textmail` int(11) NOT NULL,
+  `htmlmail` int(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
+
+--
+-- Dumping data for table `newsletter_templates`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` int(11) NOT NULL auto_increment,
+  `memberid` int(11) NOT NULL,
+  `date` varchar(200) NOT NULL,
+  `shipped` int(11) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `orders`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pages`
+--
+
+CREATE TABLE `pages` (
+  `id` int(11) NOT NULL auto_increment,
+  `deletable` int(11) NOT NULL,
+  `type` varchar(200) NOT NULL,
+  `pageorder` int(11) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `title` text NOT NULL,
+  `description` text NOT NULL,
+  `keywords` text NOT NULL,
+  `nav1` int(11) NOT NULL,
+  `nav2` int(11) NOT NULL,
+  `nav3` int(11) NOT NULL,
+  `text1` text NOT NULL,
+  `text2` text NOT NULL,
+  `text3` text NOT NULL,
+  `text4` text NOT NULL,
+  `text5` text NOT NULL,
+  `text6` text NOT NULL,
+  `text7` text NOT NULL,
+  `text8` text NOT NULL,
+  `copyright` text NOT NULL,
+  `contactemail` varchar(200) NOT NULL,
+  `contactthankyou` text NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=46 ;
+
+--
+-- Dumping data for table `pages`
+--
+
+INSERT INTO `pages` VALUES(39, 1, 'Home Page', 1, 'HOME', 'KazAmerica.com', 'KazAmerica.com', 'KazAmerica.com', 1, 0, 1, '', '', '', '', '', '', '', '', 'Copyright © 2010 KazAmerica.com. All rights reserved.\r\n', '', '');
+INSERT INTO `pages` VALUES(40, 0, 'Store', 2, 'FEATURED PRODUCTS', 'KazAmerica.com', 'KazAmerica.com', 'KazAmerica.com', 1, 0, 0, '', '', '', '', '', '', '', '', 'Copyright © 2010 KazAmerica.com. All rights reserved.\r\n', '', '');
+INSERT INTO `pages` VALUES(41, 1, 'Contact Form', 4, 'CONTACT', 'KazAmerica.com', 'KazAmerica.com', 'KazAmerica.com', 1, 0, 1, '<font size="4"><span style="font-weight: bold;">Mailing\r\nAddress:</span></font><br>\r\n\r\n2626\r\nE.Hempstead Circle,<br>\r\n\r\nAnaheim,\r\nCA 92806. USA.<br><br>\r\n\r\nMon-Fri:\r\n9:00am - 5:00pm CST<br><br>\r\n\r\nTel\r\n: 1 (714)342-9253<br>\r\n\r\nFax:\r\n1 (714)666-0103<br>\r\n\r\nSales: <a href="mailto:sales@Kazamerica.com">sales@Kazamerica.com</a><br><font size="4"><br style="font-weight: bold;"><span style="font-weight: bold;">\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nCUSTOMER\r\nSERVICE TECH SUPPORT <br></span><font style="font-style: italic;" size="3">(US and Canada Only)</font></font><br><br>\r\n\r\nCustomer\r\nService: <a href="mailto:Customer.service@Kazamerica.com">Customer.service@Kazamerica.com</a><br>\r\n\r\nSupport:\r\n<a href="Support@Kazalmerica.com">Support@Kazalmerica.com</a><br>\r\n\r\nMon-Fri:\r\n9:00am - 5:00pm PST<br><br><br><div style="text-align: center;"><span style="font-weight: bold;">Fill out the form below and we will contact you!</span><br></div>\r\n<br>', '<br>', '<br>', '', '', '', '', '', 'Copyright © 2010 KazAmerica.com. All rights reserved.\r\n', 'ydkaz@yahoo.com', '<font size="5"><span style="font-weight: bold;">Thank you!</span></font><br><br>We will contact you soon.<br>');
+INSERT INTO `pages` VALUES(42, 1, 'Standard Page', 5, 'TERMS', 'KazAmerica.com', 'KazAmerica.com', 'KazAmerica.com', 0, 0, 1, '<font size="5"><span style="font-weight: bold;">Terms\r\nand Conditions:</span></font><br><br>\r\n\r\n We\r\nAccept all Major Credit Cards<br><ul><li>\r\n\r\n	Visa <br></li><li>MasterCard <br></li><li>Discover <br></li><li>American\r\n	Express </li></ul><br>\r\n	\r\n\r\n\r\nYour\r\ndebit/credit card will only be charged once the order ships. Upon\r\nsubmitting your order on our website, a pre-authorization attempt\r\nwill be made on your account. This attempt may be declined by your\r\nbank. Multiple submissions will result in multiple attempts. Although\r\nthe charge will only be posted once we ship, the pre-authorization\r\ndoes put a hold on the purchase amount making this amount unavailable\r\nfor any purchases.<br><br>\r\n\r\n	<span style="font-weight: bold;">Processing\r\n	Time</span><br>\r\n	\r\n	All\r\n	in-stock items will ship within 2-3 business days. Depending on the\r\n	accuracy of information provided by customer at the time of\r\n	purchase, the accounting review may take up to 48 hours. No orders\r\n	are processed over the weekend and on nationally recognized\r\n	holidays.<br><br>\r\n\r\n\r\n\r\n\r\n\r\n<span style="font-weight: bold;">Shipping\r\nRestrictions</span><br>\r\n\r\nKazamerica.com\r\ndoes not ship to PO Boxes or internationally. We ship to  US 48\r\ncontinental states Shipments to Alaska, Hawaii, APO/FPO  will be\r\ncharged separately.<br><br>\r\n\r\n<span style="font-weight: bold;">Shipping\r\nand Handling Rates</span><br>\r\n\r\nShipping\r\nand handling rates are calculated based on the actual weight and\r\ndimensions of the item ordered and the shipping zip code.<br><br><span style="font-weight: bold;">Customer\r\nResponsibility</span><br>\r\nWe\r\nare not\r\nresponsible\r\nfor any damages or lost if the merchandize is not insured\r\n&nbsp;(Insurance\r\nis optional). \r\n\r\n\r\n<br><br><span style="font-weight: bold;">Sales\r\nTax</span><br>\r\n\r\nSales\r\ntax is only assessed on orders shipping to the state of California.\r\n\r\n\r\n<br>', '<br>', '<br>', '', '', '', '', '', 'Copyright © 2010 KazAmerica.com. All rights reserved.\r\n', '', '');
+INSERT INTO `pages` VALUES(43, 1, 'Standard Page', 6, 'PRIVACY', 'KazAmerica.com', 'KazAmerica.com', 'KazAmerica.com', 0, 0, 1, '\r\n<font size="5"><span style="font-weight: bold;">Privacy\r\nPolicy</span></font><br><br>Kazamerica.com\r\nvalues our customers and their privacy. We only collect our\r\ncustomer&#8217;s information in an effort to improve upon your shopping\r\nexperience and to let you know about our products and promotions. We\r\nwould never sell or rent your information to a third party.\r\nWe\r\ncollect information from our customers to process orders and better\r\nserve you with pertinent information, such as order confirmations and\r\norder status updates. Information collected includes your name,\r\nshipping address, billing address, telephone numbers, e-mail address,\r\nand payment information such as your credit card number.\r\nBeing in the Video Surveillance Camera Industry, Kazamerica.com\r\nrecognizes the importance and are 100% dedicated to protecting your\r\ninformation and utilize state of the art technology and services to\r\nensure that it is safeKazamerica.com promises to keep your\r\npurchases secure.<br><br style="font-weight: bold;"><span style="font-weight: bold;">\r\nORDERS</span><br>During\r\nthe order process, you will have to provide financial information\r\nsuch as your credit card number, expiration date, or other payment\r\ninformation. This information is used for billing purposes and to\r\nfulfill your order. If we have trouble processing an order, we will\r\nuse this contact information to get in touch with you. To properly\r\nprocess your credit card information, we must share your personal and\r\nfinancial information with the merchant bank for authorization and\r\napproval. This process is protected by an enhanced security system.\r\nSee the Security section below for more details on security measures\r\nand procedures. We do not share your personal and financial\r\ninformation with any third parties, except those specified in the\r\nSharing section of this policy.Ordering\r\nfrom Kazamerica.com Online is very Safe and Secure. From the moment\r\nyou enter our Shopping Basket or click on Checkout, you are on a\r\nsecure server, We use what is called SSL (secure socket layer)\r\ntechnology. We use the highest bit encryption with SSL at 128 bits.\r\nYour credit cards are encrypted when they are transmitted to us and\r\nare stored in a secure environment.Your credit card also provides\r\nyou with important consumer protections that safeguard your online\r\npurchases and limit your liability.You will receive an order\r\nconfirmation and tracking number to your email. We are proud to be a\r\nYahoo Store Merchant. Feel free to order online or call us to take\r\nyour credit card or payment information by phone at (714)342-9253<br><br>\r\n<span style="font-weight: bold;">Sharing\r\nInformation:</span><br>We\r\nmay employ third party companies to perform functions on our behalf.\r\nThese functions may include order fulfillment, package delivery,\r\nmarketing assistance, postal and e-mail delivery, customer service,\r\ndata analysis, and credit processing. The third parties we contract\r\nfor these purposes have limited access to your personal information\r\nand may not use it for other purposes.Notification\r\nof Changes:If\r\nwe decide to change our Privacy Policy, we will post those changes to\r\nthis privacy statement, the homepage, and other places we deem\r\nappropriate so that you are aware of what information we collect, how\r\nwe use it, and under what circumstances, if any, we disclose it. We\r\nreserve the right to modify this privacy statement at any time, so\r\nplease review it frequently. If we make material changes to this\r\npolicy, we will notify you here, by email, or by means of a notice on\r\nour homepage.<br><br>\r\nBy\r\nusing our site, you consent to our privacy policy<br><br>\r\n<span style="font-weight: bold;">Disclaimer</span><br>\r\nKazamerica.com\r\nalways strives to provide the correct information regarding products,\r\npricing and other details. However mistakes can be made and therefore\r\nKazamerica.com must and does reserve the right to change any content,\r\nprices or other material on our website without notice and cannot be\r\nheld legally responsible for such. In order to ensure correct\r\ninformation is provided to you, please contact with our sales team\r\nanytime at sales@kazamerica.com\r\n\r\n\r\n<br>', '<br>', '<br>', '', '', '', '', '', 'Copyright © 2010 KazAmerica.com. All rights reserved.\r\n', '', '');
+INSERT INTO `pages` VALUES(44, 1, 'Standard Page', 3, 'ABOUT US', 'KazAmerica.com', 'KazAmerica.com', 'KazAmerica.com', 1, 0, 1, '<font size="5"><span style="font-weight: bold;">Company with a Vision:</span></font><br><br>\r\n\r\nAt\r\nKazamerica Wholesale,\r\nWe\r\nfollow the undertaking of reliable surveillance with wired and\r\nWireless Networking for the benefit of both, the residential-users\r\nand the business professionals, for whom mobile communication and\r\nwireless networking had previously been perceived to be perplexing\r\nand frustrating.<br><br>\r\n\r\n\r\nKazamerica''s\r\nbelief that a non proprietary and readily available surveillance\r\nsystem should be the right of every customer. It is our mission to\r\nsatisfies the customers'' urgent demands for superior usability of\r\navailable technology .Our objective is to remain a world-class\r\nsurveillance system vendor by delivering wired or wireless networking\r\npremium quality products. It is our commitment to continue to refine,\r\nupgrade, and expand our core competences with the objective of\r\nmaximizing the value of our products for the benefit of both partners\r\nand end-users. <br><br>\r\n\r\n\r\nKazamerica\r\nwill continue transforming the high end technology and state of the\r\nart Wireless Networking business into a conventional global market by\r\noffering top of the line products.\r\n', '<br>', '<br>', '', '', '', '', '', 'Copyright © 2010 KazAmerica.com. All rights reserved.\r\n', '', '');
+INSERT INTO `pages` VALUES(45, 1, 'Standard Page', 7, 'RETURN POLICY', 'KazAmerica.com', 'KazAmerica.com', 'KazAmerica.com', 0, 0, 1, '<font size="5"><span style="font-weight: bold;">Return Policy</span></font><br><br>\r\n\r\nAny return request must be\r\ncommunicated to UncleVic.com within the warranty period. Please\r\nnotify Kazamerica.comby calling 97140342-9253 or email us at\r\ncustomer.support@kazamerica.com returning\r\nany item to us. Any unauthorized returns will be refused and returned\r\nto customer at customer&#8217;s expense. Specific warranty information is\r\nlisted under every item and on the order confirmation. Please refer\r\nto your original sales receipt for warranty on your particular\r\nproduct.<br><br>\r\n\r\n<span style="font-weight: bold;">Defective Product</span><br>\r\n\r\nIn case an item is\r\ndefective, Kazamerica.com will arrange for a replacement for the same\r\nitem if available. If the originally purchased item is no longer\r\navailable, a similar item may be offered.<br><br>\r\n\r\n<span style="font-weight: bold;">Replacements Item</span><br>\r\n\r\nKazamerica.com stands behind\r\nits products. If a product fails within the specified warranty\r\nperiod, we will gladly replace or fix it.\r\n\r\nRefunds\r\n\r\nRefund requests must be made\r\nwithin 30 days of purchase. Shipping and handling charges are not\r\nrefundable. All returns for a refund are subject to a 20% restocking\r\nfee. If an item is defective or no replacement is available, the\r\nrestocking fee may be waived. Items returned for refund must be\r\npre-approved by our customer service department. Items returned\r\nwithout original packaging, missing items may incur additional items.\r\nItems returned that are damaged, may void the warranty and may be\r\ndenied for refund. Items shipped to Kazamerica.com without prior\r\nauthorization will be returned to the customer at customer&#8217;s\r\nexpense.<br><br>\r\n\r\n<span style="font-weight: bold;">Please remember when\r\nreturning an Item</span><br>\r\n\r\nAll returns will be\r\ninspected by our Returns Department. Returns not meeting the below\r\ncriteria are subject to a 20% restocking fee and other charges if\r\nthey applicable:<br><ul><li>\r\n\r\n	Products returned must be\r\n	in the same condition as was sold</li><li>\r\n	\r\n	Original inside and outside\r\n	packaging must be returned</li><li>\r\n	\r\n	All serial numbers must\r\n	match the serial number on the invoice and/or original packaging</li><li>\r\n	\r\n	Products with obvious\r\n	damage, including, but not limited to abuse, cracks, dents might be\r\n	refused</li><li>\r\n	\r\n	Bundled Items must include\r\n	all individual items sold at the time of purchase</li></ul>\r\n\r\n\r\nIn case a return is\r\nrejected, Kazamerica.com will document all the reasons and notify\r\ncustomer in a timely manner.<br><br style="font-weight: bold;"><span style="font-weight: bold;">\r\n\r\nReturns Department</span><br>\r\n\r\nYou may contact our returns\r\ndepartment at (714)342-9253 or email us at\r\n<a href="mailto:Customer.Service@kazamerica.com">Customer.Service@kazamerica.com</a><br><br>', '<br>', '<br>', '', '', '', '', '', 'Copyright © 2010 KazAmerica.com. All rights reserved.\r\n', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pagetypes`
+--
+
+CREATE TABLE `pagetypes` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(200) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `pagetypes`
+--
+
+INSERT INTO `pagetypes` VALUES(1, 'Standard Page');
+INSERT INTO `pagetypes` VALUES(2, 'Photo Gallery');
+INSERT INTO `pagetypes` VALUES(3, 'Contact Form');
+INSERT INTO `pagetypes` VALUES(4, 'Profile Page');
+INSERT INTO `pagetypes` VALUES(5, 'Service Page');
+INSERT INTO `pagetypes` VALUES(6, 'Dropdown Menu');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ProductGallery_68`
+--
+
+CREATE TABLE `ProductGallery_68` (
+  `id` int(11) NOT NULL auto_increment,
+  `filename` varchar(200) default NULL,
+  `caption` varchar(1000) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `ProductGallery_68`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ProductGallery_69`
+--
+
+CREATE TABLE `ProductGallery_69` (
+  `id` int(11) NOT NULL auto_increment,
+  `filename` varchar(200) default NULL,
+  `caption` varchar(1000) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `ProductGallery_69`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ProductGallery_70`
+--
+
+CREATE TABLE `ProductGallery_70` (
+  `id` int(11) NOT NULL auto_increment,
+  `filename` varchar(200) default NULL,
+  `caption` varchar(1000) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `ProductGallery_70`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ProductGallery_71`
+--
+
+CREATE TABLE `ProductGallery_71` (
+  `id` int(11) NOT NULL auto_increment,
+  `filename` varchar(200) default NULL,
+  `caption` varchar(1000) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `ProductGallery_71`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ProductGallery_72`
+--
+
+CREATE TABLE `ProductGallery_72` (
+  `id` int(11) NOT NULL auto_increment,
+  `filename` varchar(200) default NULL,
+  `caption` varchar(1000) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `ProductGallery_72`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ProductGallery_73`
+--
+
+CREATE TABLE `ProductGallery_73` (
+  `id` int(11) NOT NULL auto_increment,
+  `filename` varchar(200) default NULL,
+  `caption` varchar(1000) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `ProductGallery_73`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ProductGallery_74`
+--
+
+CREATE TABLE `ProductGallery_74` (
+  `id` int(11) NOT NULL auto_increment,
+  `filename` varchar(200) default NULL,
+  `caption` varchar(1000) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `ProductGallery_74`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ProductGallery_75`
+--
+
+CREATE TABLE `ProductGallery_75` (
+  `id` int(11) NOT NULL auto_increment,
+  `filename` varchar(200) default NULL,
+  `caption` varchar(1000) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `ProductGallery_75`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ProductGallery_76`
+--
+
+CREATE TABLE `ProductGallery_76` (
+  `id` int(11) NOT NULL auto_increment,
+  `filename` varchar(200) default NULL,
+  `caption` varchar(1000) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `ProductGallery_76`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ProductGallery_77`
+--
+
+CREATE TABLE `ProductGallery_77` (
+  `id` int(11) NOT NULL auto_increment,
+  `filename` varchar(200) default NULL,
+  `caption` varchar(1000) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `ProductGallery_77`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ProductGallery_78`
+--
+
+CREATE TABLE `ProductGallery_78` (
+  `id` int(11) NOT NULL auto_increment,
+  `filename` varchar(200) default NULL,
+  `caption` varchar(1000) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `ProductGallery_78`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ProductGallery_79`
+--
+
+CREATE TABLE `ProductGallery_79` (
+  `id` int(11) NOT NULL auto_increment,
+  `filename` varchar(200) default NULL,
+  `caption` varchar(1000) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `ProductGallery_79`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ProductGallery_80`
+--
+
+CREATE TABLE `ProductGallery_80` (
+  `id` int(11) NOT NULL auto_increment,
+  `filename` varchar(200) default NULL,
+  `caption` varchar(1000) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `ProductGallery_80`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `products`
+--
+
+CREATE TABLE `products` (
+  `id` int(11) NOT NULL auto_increment,
+  `category` varchar(200) NOT NULL,
+  `name` varchar(200) NOT NULL default '',
+  `description` text NOT NULL,
+  `price` varchar(10) NOT NULL default '0',
+  `featured` int(11) NOT NULL,
+  `pic1` varchar(200) NOT NULL default '',
+  `quantity` int(11) NOT NULL,
+  `partnumber` varchar(100) NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=81 ;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` VALUES(70, '51', 'Kazcam101', '<br>', '39', 1, '1284608971.jpg', 1, '');
+INSERT INTO `products` VALUES(71, '51', 'Kazcam102', '<br>', '49', 1, '1284609123.jpg', 1, '');
+INSERT INTO `products` VALUES(72, '51', 'Kazptz101', '<br>', '119', 1, '1284609225.jpg', 1, '');
+INSERT INTO `products` VALUES(73, '51', 'Kazptz102', '<br>', '225', 0, '1284610236.jpg', 1, '');
+INSERT INTO `products` VALUES(74, '52', 'Kazdvr101', '<br>', '149', 0, '1284610330.jpg', 1, '');
+INSERT INTO `products` VALUES(75, '52', ' Kazdvr1038', '<br>', '249', 0, '1284610377.jpg', 1, '');
+INSERT INTO `products` VALUES(76, '52', 'Kazdvr10416', '<br>', '559', 1, '1284610458.jpg', 1, '');
+INSERT INTO `products` VALUES(77, '51', 'Kazcamw101', '<br>', '149', 1, '1284610512.jpg', 1, '');
+INSERT INTO `products` VALUES(78, '51', 'kazcamw102', '<br>', '289', 0, '1284610558.jpg', 1, '');
+INSERT INTO `products` VALUES(79, '51', 'Kazcambull101', '<br>', '110', 0, '1284610604.jpg', 1, '');
+INSERT INTO `products` VALUES(80, '51', 'Kazcambull102', '<br>', '89', 1, '1284610643.jpg', 1, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `store_categories`
+--
+
+CREATE TABLE `store_categories` (
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(200) NOT NULL,
+  `pageorder` int(11) NOT NULL,
+  `photo` varchar(200) NOT NULL,
+  `mainimage` varchar(200) NOT NULL,
+  `text` text NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=53 ;
+
+--
+-- Dumping data for table `store_categories`
+--
+
+INSERT INTO `store_categories` VALUES(51, 'Security Cameras', 1, 'noimage.jpg', '', '');
+INSERT INTO `store_categories` VALUES(52, 'DVR', 2, '', 'noimage.jpg', '<br>');

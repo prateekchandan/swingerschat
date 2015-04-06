@@ -1,0 +1,7 @@
+RewriteEngine  on 
+ErrorDocument 404 /index.php 
+RewriteRule ^Page68-home-page$ index.php?id=68
+RewriteRule ^Page73-about-us$ index.php?id=73
+RewriteRule ^Page74-terms-and-conditions$ index.php?id=74
+RewriteRule ^Page75-contact-us$ index.php?id=75
+RewriteRule ^Page76-Coming-Soon$ index.php?id=76

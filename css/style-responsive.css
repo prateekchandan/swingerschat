@@ -1,0 +1,85 @@
+/*BEGIN max and min width 979px*/
+
+@media (min-width: 900px) {
+	
+}
+
+@media (max-width: 1200px){
+
+}
+
+@media (min-width: 979px) {
+	a.navbar-brand{
+		display:none;
+	}
+}
+
+@media (max-width: 979px) {
+	.notifications {width: 100%; min-height: 20px;}
+}
+
+@media (min-width: 879px) {
+	a.navbar-brand{
+		display:none;
+	}
+	
+	
+}
+@media (min-width: 779px) {
+	a.navbar-brand{
+		display:none;
+	}
+	
+}
+
+@media (max-width: 767px) {
+
+	.navbar-nav {
+	    margin: 7.5px 0;
+	}
+
+	ul.navbar-nav li:hover ul{
+		display:none;
+	}
+	
+	.div2 {float:left; margin:0px 15px 0px 15px; width: 100%; }
+	.div3 {float:left; margin:0px 15px 0px 15px; width: 100%; }
+
+	.images .col-md-6 img{max-width: 100%; margin:2% 0% 2% 3%!important;}
+	
+	.and{margin:12px 0px 0px 3px!important;}
+	
+	/*.ftrnav ul{margin-left:9%!important;} */
+	
+	
+	.logo{text-align:center;}
+	
+	.topbar ul{ float:left!important; width:100%!important; text-align:center!important;}
+
+	.topbar ul li{ float:left!important; width:100%!important; text-align:center!important;}
+	.topbar ul li a{ float:left!important; width:100%!important; text-align:center!important;}
+	
+@media (min-width: 767px) {
+	
+	
+}
+
+@media (min-width: 768px) and (max-width: 979px) { 
+
+}
+
+@media (max-width: 600px) {
+	.profileright {width: 65%;}
+	.profileleft {width: 20%;}
+
+}
+
+@media (max-width: 550px) {
+	.profileright {width: 92%;}
+	.profileleft {width: 20%;}
+
+}
+
+
+@media (max-width: 320px) {
+}

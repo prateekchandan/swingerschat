@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+body { color:#000000; font-weight:500; background-color:#000000; font-size:14px; font-family:Arial, Helvetica, sans-serif; background-image:url(images/background.jpg); background-repeat:repeat-x; }
+        
+		a:link    {color:#0099FF; font-weight:500; text-decoration:none; border:0px; }
+        a:visited {color:#0099FF; font-weight:500;text-decoration:none; border:0px; }
+		a:hover    {color:#0099FF; font-weight:500;text-decoration:underline; border:0px; }
+		
+.nav a:link  {color:#0099FF; font-weight:700; text-decoration:none; border:0px; font-size:12px;}
+.nav a:visited {color:#0099FF; font-weight:700;text-decoration:none; border:0px; font-size:12px; }
+.nav a:hover    {color:#57E8E8; font-weight:700;text-decoration:none; border:0px; font-size:12px; }
+
+
+
+img {border:0px solid #3a3838; padding:0px; margin:0px; }
+h1 {font-size:18px; font-weight:700; font-family:Arial, Helvetica, sans-serif; color:#0099FF; margin:0px 0px 0px 0px; padding:0px; }
+h2 {font-size:14px; font-weight:700; font-family:Arial, Helvetica, sans-serif; color:#000000; margin:0px 0px 0px 0px; padding:0px; }
+h3 {font-size:14px; font-weight:500; color:#000000; background-color:#CCCCCC; width:100%; margin:0px 0px 0px 0px; padding:0px; }
+h4 {font-size:26px; font-weight:700; font-family:Arial, Helvetica, sans-serif; color:#000000; margin:0px 0px 0px 0px; padding:0px; }
+h5 {font-size:12px; font-weight:500; font-family:Arial, Helvetica, sans-serif; color:#000000; margin:0px 0px 0px 0px; padding:0px; }
+
+.headertable {width:993px; height:50px; margin:0px; background-color:#FFFFFF; text-align:center; vertical-align:middle; font-size:36px;}
+
+.nav { text-align:center;}
+
+.bodytable { background-color:#FFFFFF; margin:0px; padding:0px; text-align:center; border-top:1px solid #cccccc; vertical-align:top; height:300px;}
+
+.footer {background-color:#000000; text-align:center; border:5px solid #cccccc; height:50px; vertical-align:middle;}
+
+.mprofileleft {border-bottom:1px solid #F7F7F7; background-color:#F0F0F0; font-weight:500;}
+
+.editpagehints {text-align:left; vertical-align:top; color:#CCCCCC; width:300px; border-top:1px dotted #cccccc; border-bottom:1px dotted #cccccc;}
+.editpageleft {text-align:right; vertical-align:top; background-color:#CCCCCC; width:200px;}
+.editpageright {text-align:left; vertical-align:top; background-color:#EEEEEE; border:1px solid #cccccc; width:600px;}
+.gallerycell {margin:5px; border:1px solid #bfbcbc; text-align:center; width:50px;}
+.galleryimage {width:50px; height:50px;margin:5px; border:1px solid #bfbcbc; }
+
+.formname {float:left; text-align:left; vertical-align:middle; background-color:#FFFFFF; padding:0px 30px 0px 5px; width:270px; }
+.formtype {float:left; text-align:left; vertical-align:middle; background-color:#FFFFFF; padding:0px 30px 0px 5px; color:#CCCCCC; width:50px; }
+.formright {float:left; text-align:center; vertical-align:middle; background-color:#FFFFFF; width: 30px;}
+
+.blognav {padding:3px 5px 3px 5px; margin:0px; background-color:#181918; color:#FFFFFF; list-style:none;}
+.blognav ul {padding:0px 0px 0px 0px; margin:0px 0px 0px 0px; list-style:none;}
+.blognav ul li {padding:3px 0px 3px 5px; margin:0px; background-color:#2a2b2a; color:#FFFFFF;}
+.blognav ul li ul li {padding:3px 0px 3px 5px; margin:0px; background-color:#D1D1D1; color:#000000;}
+.blognav ul li ul li ul li {padding:5px; margin:0px; background-color:#EFEFEF; color:#000000;}
+
+.storenav {padding:0px; margin:0px 0px 0px 0px; list-style:none;}
+.storenav li {display:block; background-color:#ffffff; background-repeat:no-repeat; text-align:left; vertical-align:middle; margin:2px; border-bottom:1px solid #F7F7F7; }
+.storenav li:hover {display:block; background-color:#F7F7F7; background-repeat:no-repeat; text-align:left; vertical-align:middle;}
+.storenav li a {display:block; padding:5px 0px 5px 20px;}
+
+
+ #sortlist {
+	width: 100%;
+	margin: 0 auto;
+	padding: 20px;
+	margin-bottom: 20px;
+	border: 1px solid #a5a1a1;
+	text-align:center;
+
+	}
+#sortlist div.sorting {
+	float: left;
+	margin: 4px;
+	padding: 4px;
+	border: 1px solid #ccc;
+	background-color:#FFFFFF;
+	}
+	
+#sortlist div.sorting:hover { 
+	float: left;
+	margin: 4px;
+	padding: 4px;
+	background-color:#DEE7EB;
+	cursor: move;
+	}
