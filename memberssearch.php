@@ -46,9 +46,13 @@ require ('includes/head.php');
 				else{
 					$billingcity = '';
 				}
+				if(isset($_POST['min_age']) && intval($_POST['min_age']) > 0){
+					$min_age = intval($_POST['min_age']);
+					$searchstring .= "AND `age` >= '$min_age' ";
+				}
 				if(isset($_POST['max_age']) && intval($_POST['max_age']) > 0){
 					$max_age = intval($_POST['max_age']);
-					$searchstring .= "AND `age` < '$max_age' ";
+					$searchstring .= "AND `age` <= '$max_age' ";
 				}
 				?>
 				<div class='row'>
