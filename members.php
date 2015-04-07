@@ -62,6 +62,7 @@ $bio = str_replace("\n", "<br />", $bio1);
 				}
 				echo"</div>";
 				
+
 				echo"<div class='membersmain'>";
 
 					echo"<div class='membersdiv'>
@@ -69,6 +70,7 @@ $bio = str_replace("\n", "<br />", $bio1);
 					    <a href='members.php'>My Account</a>&nbsp;&nbsp;&nbsp;
 					    <a href='members.php?location=2'>Edit Account</a>&nbsp;&nbsp;&nbsp;
 					    <a href='members.php?location=3'>Profile Picture</a>&nbsp;&nbsp;&nbsp;
+					    <a href='myfavourites.php'>My Favourites</a>&nbsp;&nbsp;&nbsp;
 					    <a href='logout.php'>Logout</a>&nbsp;&nbsp;&nbsp;
 					</p>";
 					
