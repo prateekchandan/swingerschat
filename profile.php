@@ -43,7 +43,7 @@ require ('includes/head.php');
 					echo"<div class='profileleft'>";
 					echo"<img src='members/$photo' class='profilepicture' />";
 					echo"</div>";
-					if (isset($_SESSION['memberloggedin'])) {
+					if (isset($_SESSION['memberloggedin']) && $_GET['userid']!=$_SESSION['memberloggedin']) {
 						if(isset($_POST['post_type'])){
 							if($_POST['post_type']=="SEND_MESSAGE"){
 								$message = $_POST['message'];
