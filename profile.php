@@ -70,6 +70,7 @@ require ('includes/head.php');
 									`memberid` = '$userid' && `friendid`='$frndid'");
 
 							}
+							header("Location:./profile.php?userid=$frndid");
 						}
 						$memberid = $_SESSION['memberloggedin'];
 						$fav_frnd = mysql_query("SELECT * FROM `friends` where
