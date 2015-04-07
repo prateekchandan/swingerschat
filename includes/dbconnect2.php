@@ -1,8 +1,14 @@
 <?php 
+/*
 $dbhost = "10.6.173.63 ";
 $dbuser = "swingerschat";
 $dbname = "swingerschat";
 $dbpass = "cC1777771@";
+*/
+$dbhost = "localhost";
+$dbuser = "root";
+$dbname = "swingerschat";
+$dbpass = "9431221178";
 
 $dbc = mysql_connect("$dbhost","$dbuser","$dbpass"); 
 if (!$dbc) { 

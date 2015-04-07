@@ -22,10 +22,18 @@ if($title != ""){
 
 <script type="text/javascript">
 function refreshState(catid) {
-        new Ajax.Updater("state", "refreshstate.php?catid=" + catid);
+        new Ajax.Updater("state", "refreshstate.php?catid=" + catid,{onComplete:function(){
+        	document.getElementById('state').innerHTML = "<option value=''>Select State</option>"+ document.getElementById('state').innerHTML;
+        	document.getElementById('city').innerHTML = "<option value=''>Select City</option>";
+        }});
 }
 function refreshCity(catid) {
-        new Ajax.Updater("city", "refreshcity.php?catid=" + catid);
+        new Ajax.Updater("city", "refreshcity.php?catid=" + catid,{onComplete:function(){
+        	if(catid!="")
+        		document.getElementById('city').innerHTML = "<option value=''>Select City</option>" + document.getElementById('city').innerHTML;
+        	else
+        	document.getElementById('city').innerHTML = "<option value=''>Select City</option>";
+        }});
 }
 </script>
 
