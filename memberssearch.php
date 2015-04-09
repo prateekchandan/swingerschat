@@ -50,10 +50,17 @@ require ('includes/head.php');
 					$min_age = intval($_POST['min_age']);
 					$searchstring .= "AND `age` >= '$min_age' ";
 				}
+				else{
+					$min_age = 18;
+				}
 				if(isset($_POST['max_age']) && intval($_POST['max_age']) > 0){
 					$max_age = intval($_POST['max_age']);
 					$searchstring .= "AND `age` <= '$max_age' ";
 				}
+				else{
+					$max_age = 65;
+				}
+
 				?>
 				<div class='row'>
 					<div class='col-md-12' style='padding:10px'>
@@ -68,10 +75,10 @@ require ('includes/head.php');
 								</p>
 								
 								<p>Min Age: <br>
-									<input type="number" name="min_age" value="<?php echo $_POST['min_age'];?>" style="width:60px">
+									<input type="number" name="min_age" value="<?php echo $min_age;?>" style="width:60px">
 								</p>
 								<p>Max Age: <br>
-									<input type="number" name="max_age" value="<?php echo $_POST['max_age'];?>" style="width:60px">
+									<input type="number" name="max_age" value="<?php echo $max_age;?>" style="width:60px">
 								</p>
 								<p></p>
 								<p>Country:<br>

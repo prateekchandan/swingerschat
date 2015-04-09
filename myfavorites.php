@@ -1,6 +1,6 @@
 <?php
 require ('includes/dbconnect.php');
-$title = "My Favourites";
+$title = "My favorites";
 require ('includes/head.php');
 
 //MEMBERS ONLY CHECK
@@ -11,7 +11,7 @@ if (!isset($_SESSION['memberloggedin'])) {
 
 $memberid = ($_SESSION['memberloggedin']);
 if(isset($_POST['post_type'])){
-	if($_POST['post_type']=="DELETE_FAVOURITE"){
+	if($_POST['post_type']=="DELETE_favorite"){
 		$frndid = $_POST['userid'];
 		$userid = $_SESSION['memberloggedin'];
 		mysql_query("DELETE FROM `friends` where
@@ -28,7 +28,7 @@ if(isset($_POST['post_type'])){
 				<div class='row'>
 					<div class='col-md-12' style='padding:10px'>
 						<div class='Searchfilters'>
-							<h2 style="font-size:2em;"><u>My Favourites</u></h2>
+							<h2 style="font-size:2em;"><u>My favorites</u></h2>
 						</div>
 					</div>
 				</div>
@@ -70,9 +70,9 @@ if(isset($_POST['post_type'])){
 					echo"<br>";
 					?>
 					<div class="text-center">
-					<form method="POST" action="./myfavourites.php" style="float:none;">
+					<form method="POST" action="./myfavorites.php" style="float:none;">
 							<input type="hidden" name="userid" value="<?php echo $userid;?>">
-							<input type="hidden" name="post_type" value="DELETE_FAVOURITE">
+							<input type="hidden" name="post_type" value="DELETE_favorite">
 							<button class="btn btn-danger btn-xs"  style="color:#fff">
 							<span class="glyphicon glyphicon-plus" ></span>
 										Remove

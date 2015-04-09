@@ -55,7 +55,7 @@ require ('includes/head.php');
 								$message_sent = 1;
 
 							}
-							if($_POST['post_type']=="ADD_FAVOURITE"){
+							if($_POST['post_type']=="ADD_favorite"){
 								$frndid = $_POST['userid'];
 								$userid = $_SESSION['memberloggedin'];
 								mysql_query("INSERT INTO `friends`
@@ -63,7 +63,7 @@ require ('includes/head.php');
 									('$userid','$frndid',1)");
 
 							}
-							if($_POST['post_type']=="DELETE_FAVOURITE"){
+							if($_POST['post_type']=="DELETE_favorite"){
 								$frndid = $_POST['userid'];
 								$userid = $_SESSION['memberloggedin'];
 								mysql_query("DELETE FROM `friends` where
@@ -96,10 +96,10 @@ require ('includes/head.php');
 								?>
 								<form method="POST" action="./profile.php?userid=<?php echo $_GET['userid']?>" style="display: inline-block;">
 									<input type="hidden" name="userid" value="<?php echo $_GET['userid']?>">
-								    <input type="hidden" name="post_type" value="ADD_FAVOURITE">
+								    <input type="hidden" name="post_type" value="ADD_favorite">
 									<button class="btn btn-primary"  style="color:#fff">
 										<span class="glyphicon glyphicon-plus" ></span>
-										Add to Favourites
+										Add to favorites
 									</button>
 								</form>
 								<?php
@@ -107,10 +107,10 @@ require ('includes/head.php');
 								?>
 									<form method="POST" action="./profile.php?userid=<?php echo $_GET['userid']?>" style="display: inline-block;">
 									<input type="hidden" name="userid" value="<?php echo $_GET['userid']?>">
-								    <input type="hidden" name="post_type" value="DELETE_FAVOURITE">
+								    <input type="hidden" name="post_type" value="DELETE_favorite">
 									<button class="btn btn-danger"  style="color:#fff">
 										<span class="glyphicon glyphicon-plus" ></span>
-										Remove From Favourites
+										Remove From favorites
 									</button>
 								</form>
 								<?php } ?>
