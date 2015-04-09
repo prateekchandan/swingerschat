@@ -70,7 +70,7 @@ $bio = str_replace("\n", "<br />", $bio1);
 					    <a href='members.php'>Account</a>&nbsp;&nbsp;&nbsp;
 					    <a href='members.php?location=2'>Edit Account</a>&nbsp;&nbsp;&nbsp;
 					    <a href='members.php?location=3'>Profile Picture</a>&nbsp;&nbsp;&nbsp;
-					    <a href='myfavorites.php'>favorites</a>&nbsp;&nbsp;&nbsp;
+					    <a href='myfavorites.php'>Favorites</a>&nbsp;&nbsp;&nbsp;
 					    <a href='messages.php'>Messages</a>&nbsp;&nbsp;&nbsp;
 					    <a href='logout.php'>Logout</a>&nbsp;&nbsp;&nbsp;
 					</p>";

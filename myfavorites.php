@@ -1,6 +1,6 @@
 <?php
 require ('includes/dbconnect.php');
-$title = "My favorites";
+$title = "My Favorites";
 require ('includes/head.php');
 
 //MEMBERS ONLY CHECK
@@ -28,7 +28,7 @@ if(isset($_POST['post_type'])){
 				<div class='row'>
 					<div class='col-md-12' style='padding:10px'>
 						<div class='Searchfilters'>
-							<h2 style="font-size:2em;"><u>My favorites</u></h2>
+							<h2 style="font-size:2em;"><u>My Favorites</u></h2>
 						</div>
 					</div>
 				</div>
