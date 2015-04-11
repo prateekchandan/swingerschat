@@ -68,10 +68,11 @@ $bio = str_replace("\n", "<br />", $bio1);
 					echo"<div class='membersdiv'>
 					<p class='membersnav'>
 					    <a href='members.php'>Account</a>&nbsp;&nbsp;&nbsp;
-					    <a href='members.php?location=2'>Edit Account</a>&nbsp;&nbsp;&nbsp;
+					    <a href='members.php?location=2'>Edit</a>&nbsp;&nbsp;&nbsp;
 					    <a href='members.php?location=3'>Profile Picture</a>&nbsp;&nbsp;&nbsp;
 					    <a href='myfavorites.php'>Favorites</a>&nbsp;&nbsp;&nbsp;
 					    <a href='messages.php'>Messages</a>&nbsp;&nbsp;&nbsp;
+					    <a href='mygallery.php'>Gallery</a>&nbsp;&nbsp;&nbsp;
 					    <a href='logout.php'>Logout</a>&nbsp;&nbsp;&nbsp;
 					</p>";
 					
