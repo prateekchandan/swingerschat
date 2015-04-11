@@ -220,7 +220,7 @@ require ('includes/head.php');
 					echo"</div>";
 					echo"<div class='profileright2'>";
 					echo"<h1>My Gallery</h1><hr>";
-					$home_dir = "./images/users/".$memberid."/";
+					$home_dir = "./images/users/".$userid."/";
 					$files = glob($home_dir.'*.*');
 					?>
 					<div class="diy-slideshow">
