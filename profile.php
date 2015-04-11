@@ -4,6 +4,73 @@ $title = "Profile";
 require ('includes/head.php');
 ?>
 
+<style type="text/css">
+	.diy-slideshow{
+	  position: relative;
+	  display: block;
+	  overflow: hidden;
+	}
+	figure{
+	  position: absolute;
+	  opacity: 0;
+	  text-align: center;
+	  transition: 1s opacity;
+	}
+	figure img{
+		max-height: 400px;
+	}
+	figcaption{
+	  position: absolute;
+	  font-family: sans-serif;
+	  font-size: .8em;
+	  bottom: .75em;
+	  right: .35em;
+	  padding: .25em;
+	  color: #fff;
+	  background: rgba(0,0,0, .25);
+	  border-radius: 2px;
+	}
+	figcaption a{
+	  color: #fff;
+	}
+	figure.show{
+	  opacity: 1;
+	  position: static;
+	  transition: 1s opacity;
+	}
+	.next, .prev{
+	  color: #fff;
+	  position: absolute;
+	  background: rgba(0,0,0, .6);
+	  top: 50%;
+	  z-index: 1;
+	  font-size: 2em;
+	  margin-top: -.75em;
+	  opacity: .3;
+	  user-select: none;
+	}
+	.next:hover, .prev:hover{
+	  cursor: pointer;
+	  opacity: 1;
+	}
+	.next{
+	  right: 0;
+	  padding: 10px 5px 15px 10px;
+	  border-top-left-radius: 3px;
+	  border-bottom-left-radius: 3px;
+	}
+	.prev{
+	  left: 0;
+	  padding: 10px 10px 15px 5px;
+	  border-top-right-radius: 3px;
+	  border-bottom-right-radius: 3px;
+	}
+	p{
+	  margin: 10px 20px;
+	  color: #fff;
+	}
+</style>
+
 
 <div class="main-content clearfix">
 	<div class="container clearfix">
@@ -151,7 +218,24 @@ require ('includes/head.php');
 					echo"<p><strong>City:</strong> $billingcity</p>";
 						
 					echo"</div>";
+					echo"<div class='profileright2'>";
+					echo"<h1>My Gallery</h1><hr>";
+					$home_dir = "./images/users/".$memberid."/";
+					$files = glob($home_dir.'*.*');
+					?>
+					<div class="diy-slideshow">
+					<?php foreach($files as $key=> $file) { ?>
+					<figure <?php if($key==0) echo 'class="show"'; ?>>
+				        <img src="<?php echo $file;?>" />
+				    </figure>
+				    <?php } ?>
+					  <span class="prev">&laquo;</span>
+					  <span class="next">&raquo;</span>
+					</div>
 					
+					<?php
+						
+					echo"</div>";
 					echo"<div class='profileright2'>";
 					echo"<h1>My Bio</h1>";
 					
@@ -166,7 +250,40 @@ require ('includes/head.php');
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+	(function(){
+  
+		var counter = 0, // to keep track of current slide
+		    $items = document.querySelectorAll('.diy-slideshow figure'), // a collection of all of the slides, caching for performance
+		    numItems = $items.length; // total number of slides
 
+		// this function is what cycles the slides, showing the next or previous slide and hiding all the others
+		var showCurrent = function(){
+		  var itemToShow = Math.abs(counter%numItems);// uses remainder (aka modulo) operator to get the actual index of the element to show  
+		  
+		  // remove .show from whichever element currently has it 
+		  // http://stackoverflow.com/a/16053538/2006057
+		  [].forEach.call( $items, function(el){
+		    el.classList.remove('show');
+		  });
+		  
+		  // add .show to the one item that's supposed to have it
+		  $items[itemToShow].classList.add('show');    
+		};
+
+		// add click events to prev & next buttons 
+		document.querySelector('.next').addEventListener('click', function() {
+		     counter++;
+		     showCurrent();
+		  }, false);
+
+		document.querySelector('.prev').addEventListener('click', function() {
+		     counter--;
+		     showCurrent();
+		  }, false);
+		  
+		})();  
+</script>
 <?php require('includes/footer.php'); ?>
 </body>
 </html>
