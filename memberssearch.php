@@ -65,22 +65,28 @@ require ('includes/head.php');
 				<div class='row'>
 					<div class='col-md-12' style='padding:10px'>
 						<div class='searchfilters'>
-							<form action='memberssearch.php' method='post'>
-								<p>Sex: <br>
+							<div class="row">
+							<form action='memberssearch.php' method='post' style="width:100%">
+								<div class="col-sm-2" style="width:12%">
+									<p>Sex: <br>
 									<select name='filtersex' style='max-width:80px;'>
 									<option value="">None</option>
 									<option value='Male'  <?php if ($filtersex == "Male") { echo "selected"; } ?>>Male</option>
 									<option value='Female' <?php if ($filtersex == "Female") { echo "selected"; } ?>>Female</option>
-									</select>
-								</p>
+									</select></p>
+								</div>
 								
-								<p>Min Age: <br>
+								<div class="col-sm-2" style="width:12%">
+								<p>Min age:<br>
 									<input type="number" name="min_age" value="<?php echo $min_age;?>" style="width:60px">
 								</p>
-								<p>Max Age: <br>
+								</div>
+								<div class="col-sm-2" style="width:12.5%">
+								<p>Max Age:<br>
 									<input type="number" name="max_age" value="<?php echo $max_age;?>" style="width:60px">
 								</p>
-								<p></p>
+								</div>
+								<div class="col-sm-2" style="width:19.5%">
 								<p>Country:<br>
 									<select name='billingcountry' onchange='refreshState(this.value)' style='max-width:140px;' >
 									<option value="">No Filter</option>
@@ -98,6 +104,8 @@ require ('includes/head.php');
 						
 									</select>
 								</p>
+								</div>
+								<div class="col-sm-2" style="width:18%">
 								<p>State<br>
 									<select name='billingstate' id='state' onchange='refreshCity(this.value)' style='max-width:140px' >";
 									<option value="">No Filter</option>
@@ -110,6 +118,8 @@ require ('includes/head.php');
 									?>
 									</select>
 								</p>
+								</div>
+								<div class="col-sm-2" style="width:18%">
 								<p>City <br>
 									<select name='billingcity' id='city' style='max-width:140px'>";
 									<option value="">No Filter</option>
@@ -122,11 +132,14 @@ require ('includes/head.php');
 									?>
 									</select>
 								</p>
+								</div>
+								<div class="col-sm-2" style="width:8%">
 								<p><br>
 									<input type='submit' class="btn btn-success" name='submit' value='Search' />
-									<button class="btn btn-warning" type="reset">Reset</button>
 								</p>
+								</div>
 							</form>
+							</div>
 						</div>
 					</div>
 				</div>
