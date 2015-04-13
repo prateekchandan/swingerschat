@@ -3,7 +3,34 @@ require ('includes/dbconnect.php');
 $title = "Search Members";
 require ('includes/head.php');
 ?>
-
+<style type="text/css">
+	#filter1 { width : 12%;}
+	#filter2 { width : 12%;}
+	#filter3 { width : 13%;}
+	#filter4 { width : 19%;}
+	#filter5 { width : 18%;}
+	#filter6 { width : 18%;}
+	#filter7 { width : 8%;}
+	@media(max-width: 768px){
+		#filter1 { width : 20%;}
+		#filter2 { width : 20%;}
+		#filter3 { width : 20%;}
+		#filter4 { width : 40%;}
+		#filter5 { width : 40%;}
+		#filter6 { width : 40%;}
+		#filter7 { width : 20%;}
+		#filter1,#filter2,#filter3,#filter4,#filter5,#filter6,#filter7
+		{
+			display: block;
+			float: left;
+			height: 70px;
+		}
+	}
+	@media (min-width: 768px){
+		.container {
+		  width: 1000px;
+	}
+</style>
 
 <div class="main-content clearfix">
 	<div class="container clearfix">
@@ -63,11 +90,11 @@ require ('includes/head.php');
 
 				?>
 				<div class='row'>
-					<div class='col-md-12' style='padding:10px'>
+					<div class='col-md-12' style='padding:4px'>
 						<div class='searchfilters'>
 							<div class="row">
 							<form action='memberssearch.php' method='post' style="width:100%">
-								<div class="col-sm-2" style="width:12%">
+								<div class="col-sm-2" id="filter1">
 									<p>Sex: <br>
 									<select name='filtersex' style='max-width:80px;'>
 									<option value="">None</option>
@@ -76,17 +103,17 @@ require ('includes/head.php');
 									</select></p>
 								</div>
 								
-								<div class="col-sm-2" style="width:12%">
+								<div class="col-sm-2" id="filter2">
 								<p>Min age:<br>
 									<input type="number" name="min_age" value="<?php echo $min_age;?>" style="width:60px">
 								</p>
 								</div>
-								<div class="col-sm-2" style="width:12.5%">
+								<div class="col-sm-2" id="filter3">
 								<p>Max Age:<br>
 									<input type="number" name="max_age" value="<?php echo $max_age;?>" style="width:60px">
 								</p>
 								</div>
-								<div class="col-sm-2" style="width:19.5%">
+								<div class="col-sm-2" id="filter4" >
 								<p>Country:<br>
 									<select name='billingcountry' onchange='refreshState(this.value)' style='max-width:140px;' >
 									<option value="">No Filter</option>
@@ -105,7 +132,7 @@ require ('includes/head.php');
 									</select>
 								</p>
 								</div>
-								<div class="col-sm-2" style="width:18%">
+								<div class="col-sm-2" id="filter5">
 								<p>State<br>
 									<select name='billingstate' id='state' onchange='refreshCity(this.value)' style='max-width:140px' >";
 									<option value="">No Filter</option>
@@ -119,7 +146,7 @@ require ('includes/head.php');
 									</select>
 								</p>
 								</div>
-								<div class="col-sm-2" style="width:18%">
+								<div class="col-sm-2" id="filter6">
 								<p>City <br>
 									<select name='billingcity' id='city' style='max-width:140px'>";
 									<option value="">No Filter</option>
@@ -133,7 +160,7 @@ require ('includes/head.php');
 									</select>
 								</p>
 								</div>
-								<div class="col-sm-2" style="width:8%">
+								<div class="col-sm-2" id="filter7">
 								<p><br>
 									<input type='submit' class="btn btn-success" name='submit' value='Search' />
 								</p>

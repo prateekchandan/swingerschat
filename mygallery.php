@@ -85,7 +85,7 @@ if(isset($_POST['post_type'])){
 				
 				echo"</div>";
 				?>
-				<hr>
+				<br>
 				<div class='cl'></div>
 				<!--    END TEMPLATE   -->
 				</div>
