@@ -22,8 +22,9 @@ function GetAllMessages($userid)
 		return array();
 	}
 
-	$name[$userid] = mysql_fetch_assoc($q)['username'];
-
+	$name[$userid] = mysql_fetch_assoc($q);
+	$name[$userid] = $name[$userid]['username'];
+	
 	$messages = mysql_query("SELECT * FROM `messages` WHERE 
 			(`memberid` = '$memberid' && `friendid` = '$userid') ||
 			(`memberid` = '$userid' && `friendid` = '$memberid') 
