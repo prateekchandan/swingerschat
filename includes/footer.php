@@ -202,6 +202,11 @@ jQuery( document ).ready(function( $ ) {
 });
 </script>
 
+<?php } else{?>
+
+<script type="text/javascript">
+	localStorage.clear();
+</script>
 <?php } ?>
 	    <div class="navbar-default footer">
 		    <div class="container clearfix">
