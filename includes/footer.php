@@ -7,16 +7,15 @@
 
 		$memberid = $_SESSION['memberloggedin'];
 
-		$messages = mysql_query("SELECT * FROM `messages` WHERE 
-		(`memberid` = '$memberid' || `friendid` = $memberid )");
+		$messages = mysql_query("SELECT * FROM `members`");
 
 		$allmsg = array();
 
 		while($row = mysql_fetch_assoc($messages)){
-			if($row['memberid'] == $memberid)
-				$fnid = $row['friendid'];
+			if($row['id'] == $memberid)
+				continue;
 			else
-				$fnid = $row['memberid'];
+				$fnid = $row['id'];
 			$allmsg[$fnid] = GetAllMessages($fnid);
 		}
 
