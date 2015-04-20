@@ -298,7 +298,7 @@ function sendMessage(){
 			if(openedArr.indexOf(id)==-1){
 				jQuery('#msg-cut-'+id).click();
 			}	
-			if(minArr.indexOf(id)==-1){
+			if(minArr.indexOf(id)!=-1){
 				jQuery('#msg-hide-'+id).click();
 			}
 		}
