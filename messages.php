@@ -236,6 +236,9 @@ require ('includes/footer.php');
 					function chatboxopen(id) {
 						if(openedArr.indexOf(id)==-1){
 							jQuery('#msg-cut-'+id).click();
+						}
+						if(minArr.indexOf(id)==-1){
+							jQuery('#msg-hide-'+id).click();
 						}						
 					}
 </script>
