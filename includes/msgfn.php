@@ -63,7 +63,8 @@ function GetAllMessages($userid)
 		}
 		if($row['memberid'] == $userid){
 			$temp = array(0,$name[$userid],$row['comment'],$str);
-			$check = "Show";
+			if($row['new']=="1")
+				$check = "Show";
 		}
 		array_push($return, $temp);
 	}

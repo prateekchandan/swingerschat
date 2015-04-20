@@ -208,3 +208,16 @@ else{
 </div>
 	<?php
 }
+?>
+<?php
+require ('includes/footer.php');
+?>
+
+
+
+</body>
+</html>
+
+<?php
+ob_end_flush();
+?>

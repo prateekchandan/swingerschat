@@ -91,3 +91,16 @@ if(isset($_POST['post_type'])){
 		</div>
 	</div>
 </div>
+
+<?php
+require ('includes/footer.php');
+?>
+
+
+
+</body>
+</html>
+
+<?php
+ob_end_flush();
+?>
