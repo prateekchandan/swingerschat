@@ -71,6 +71,9 @@ if(!isset($_GET['userid'])){
 							<a class="btn btn-success btn-xs" href="./messages.php?userid=<?php echo $userid;?>" style="color:#fff">
 										See Messages
 							</a>
+							<a class="btn btn-success btn-xs" onclick="chatboxopen(<?php echo $userid;?>); return false;" style="color:#fff">
+								Open ChatBox
+							</a>
 					</div>
 					<div class="text-center" style="margin-bottom:5px">
 					<form method="POST" action="./myfavourites.php" style="float:none;">
@@ -89,7 +92,7 @@ if(!isset($_GET['userid'])){
 				echo"</div>";
 				?>
 				<div class='cl'></div>
-				<!--    END TEMPLATE   -->
+				
 				</div>
 			</div>
 		</div>
@@ -213,7 +216,13 @@ else{
 require ('includes/footer.php');
 ?>
 
-
+<script type="text/javascript">
+					function chatboxopen(id) {
+						if(openedArr.indexOf(id)==-1){
+							jQuery('#msg-cut-'+id).click();
+						}						
+					}
+</script>
 
 </body>
 </html>
