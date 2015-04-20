@@ -67,7 +67,7 @@
 		padding: 10px;
 		overflow: auto;
 	}
-	.msg-cut .msg-hide{
+	.msg-cut , .msg-hide{
 		font-weight: normal;
 		cursor: pointer;
 	}
@@ -323,7 +323,7 @@ jQuery( document ).ready(function( $ ) {
 	function update_messages(id,data,flag){
 		if(typeof(flag)=="undefined")
 			flag = 0;
-		
+
 		var body = jQuery('#msg-body-'+id+" div")[0];
 		body.innerHTML = "";
 
