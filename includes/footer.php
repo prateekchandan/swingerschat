@@ -181,7 +181,7 @@
 	<div class="msgbox" id="msg-box-<?php echo $key;?>" style="display:none">
 		<div class="msg-box-head" id="msg-box-head-<?php echo $key;?>">
 			<span class="text-left">
-				<a class="msg-head-name" onclick="return false" href="#"><?php echo $msg[1];?></a>
+				<a class="msg-head-name" href="profile.php?userid=<?php echo $key;?>"><?php echo $msg[1];?></a>
 			</span>
 			<span class="text-right header-right">
 				<span data-id="<?php echo $key;?>" id="msg-hide-<?php echo $key;?>" class="msg-hide glyphicon glyphicon-minus" aria-hidden="true"></span>
@@ -238,6 +238,10 @@ function clickfunction(){
 	    	jQuery("#msg-box-"+openedArr[i]).css("right",offset+"px");
 	    	offset+=270;
 	    };
+
+	    var body = jQuery('#msg-body-'+id+" div")[0];
+		body.scrollTop = body.scrollHeight;
+
  }
 function hidefunction(){
     	var id = jQuery(this).data('id');
@@ -348,7 +352,7 @@ jQuery( document ).ready(function( $ ) {
 		var toputhtml = '<div class="msgbox" id="msg-box-IDOFUSER" style="display:none">\
 		<div class="msg-box-head" id="msg-box-head-IDOFUSER">\
 			<span class="text-left">\
-				<a class="msg-head-name" onclick="return false" href="#">NAMEOFUSER</a>\
+				<a class="msg-head-name" href="profile.php?userid=IDOFUSER">NAMEOFUSER</a>\
 			</span>\
 			<span class="text-right header-right">\
 				<span data-id="IDOFUSER" id="msg-hide-IDOFUSER" class="msg-hide glyphicon glyphicon-minus" aria-hidden="true"></span>\

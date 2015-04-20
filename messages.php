@@ -11,8 +11,13 @@ if (!isset($_SESSION['memberloggedin'])) {
 
 $memberid = ($_SESSION['memberloggedin']);
 if(isset($_POST['post_type'])){
-	if($_POST['post_type']=="DELETE_FAVOURITE"){
-		
+	if($_POST['post_type']=="DELETE_ALL_MESSAGE"){
+		$userid = $_POST['userid'];
+		mysql_query("DELETE FROM `messages` WHERE 
+		(`memberid` = '$memberid' && `friendid` = '$userid') ||
+		(`memberid` = '$userid' && `friendid` = '$memberid')
+		");
+		header("Location:messages.php");
 	}
 }
 if(!isset($_GET['userid'])){
@@ -76,11 +81,11 @@ if(!isset($_GET['userid'])){
 							</a>
 					</div>
 					<div class="text-center" style="margin-bottom:5px">
-					<form method="POST" action="./myfavourites.php" style="float:none;">
+					<form method="POST" action="./messages.php" onsubmit="return confirm('Are you sure want to Delete All Messages ?')" style="float:none;">
 							<input type="hidden" name="userid" value="<?php echo $userid;?>">
-							<input type="hidden" name="post_type" value="DELETE_FAVOURITE">
+							<input type="hidden" name="post_type" value="DELETE_ALL_MESSAGE">
 							<button class="btn btn-danger btn-xs"  style="color:#fff">
-							<span class="glyphicon glyphicon-plus" ></span>
+							<span class="glyphicon glyphicon-minus" ></span>
 										Delete All Messages
 							</button>
 					</form>
@@ -164,7 +169,10 @@ else{
 				<div class='row'>
 					<div class='col-md-12' style='padding:10px'>
 						<div class='Searchfilters'>
-							<h2 style="font-size:2em;"><u>All Messages from <?php echo $username; ?></u></h2>
+							<h2 style="font-size:2em;">
+							<span><a href="messages.php" title='Go to Messages'><span class="glyphicon glyphicon-chevron-left" ></span></a></span>
+							<u>All Messages from <?php echo $username; ?></u>
+							</h2>
 						</div>
 					</div>
 				</div>
@@ -178,6 +186,14 @@ else{
 						<button class="btn btn-success">Send</button>
 					</form>
 				</div></div>
+				<div class="row">
+					<div class="col-md-12" style="margin-bottom:10px;margin-top:-10px;margin-left:20px">
+						<a class="btn btn-success" onclick="chatboxopen(<?php echo $userid;?>); return false;" style="color:#fff">
+								Open ChatBox
+							</a>
+						<br>
+					</div>
+				</div>
 				<?php
 				while ($r = mysql_fetch_array($messages)) {
 					$comment = $r['comment'];
@@ -192,11 +208,11 @@ else{
 					echo "<br>Sent at : ".$time;
 					echo "<br>";
 					?>
-					<form method="POST" action="./messages.php?userid=<?php echo $userid;?>" style="float:none;">
+					<form method="POST" onsubmit="return confirm('Are you sure want to Delete this messages ?')" action="./messages.php?userid=<?php echo $userid;?>" style="float:none;">
 							<input type="hidden" name="msgid" value="<?php echo $r['id'];?>">
 							<input type="hidden" name="post_type" value="DELETE_MESSAGE">
 							<button class="btn btn-danger btn-xs"  style="color:#fff">
-							<span class="glyphicon glyphicon-plus" ></span>
+							<span class="glyphicon glyphicon-minus" ></span>
 										Delete
 							</button>
 					</form>

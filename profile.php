@@ -186,7 +186,7 @@ require ('includes/head.php');
 								</button>
 								<div class="collapse" id="messageBox">
 								  <div class="well">
-								    <form action="./profile.php?userid=<?php echo $_GET['userid']?>" method="POST">
+								    <form action="./profile.php?userid=<?php echo $_GET['userid']?>"  id="SEND_MESSAGE" onsubmit="return sendMessage();" method="POST">
 								    	<input type="hidden" name="userid" value="<?php echo $_GET['userid']?>">
 								    	<input type="hidden" name="post_type" value="SEND_MESSAGE">
 								    	<textarea class="form-control" name="message" required></textarea>
@@ -285,6 +285,25 @@ require ('includes/head.php');
 		})();  
 </script>
 <?php require('includes/footer.php'); ?>
+<script type="text/javascript">
+function sendMessage(){
+	var data=jQuery('#SEND_MESSAGE').serializeArray();
+	id = parseInt(data[0].value);
+	jQuery('#SEND_MESSAGE')[0].reset();
+	jQuery.ajax({
+		url:'profile.php',
+		data : data,
+		type : "POST",
+		success:function(){
+			if(openedArr.indexOf(id)==-1){
+				jQuery('#msg-cut-'+id).click();
+			}	
+		}
+	})
+	return false;
+
+}
+</script>
 </body>
 </html>
 
