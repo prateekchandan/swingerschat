@@ -70,6 +70,9 @@
 	.msg-cut , .msg-hide{
 		font-weight: normal;
 		cursor: pointer;
+		padding: 5px;
+		margin-top: -5px;
+
 	}
 	.header-right{
 	float:right;font-weight: normal;font-size: 14px;padding-top: 5px;
@@ -236,7 +239,6 @@ function clickfunction(){
 	    	offset+=270;
 	    };
  }
-
 function hidefunction(){
     	var id = jQuery(this).data('id');
     	var a = parseInt(jQuery('#msg-box-'+id).css('height'));
@@ -268,8 +270,8 @@ function sendmsgfunction(e){
 	sendMessage(id,e.keyCode);
 }
 jQuery( document ).ready(function( $ ) {
-    $('.msg-cut').click(clickfunction);
-    $('.msg-hide').click(hidefunction);
+    $('.msg-cut').unbind().click(clickfunction);
+    $('.msg-hide').unbind().click(hidefunction);
     $('.msg-send').keydown(sendmsgfunction);
 
     if(typeof(Storage) !== "undefined") {
@@ -379,8 +381,8 @@ jQuery( document ).ready(function( $ ) {
 						jQuery('#msg-row').append(toputhtml);
 					}
 
-					jQuery('.msg-cut').click(clickfunction);
-    				jQuery('.msg-hide').click(hidefunction);
+					jQuery('.msg-cut').unbind().click(clickfunction);
+    				jQuery('.msg-hide').unbind().click(hidefunction);
     				jQuery('.msg-send').on('keydown',sendmsgfunction);
 
 					if(data[id][0]=='Show'){
